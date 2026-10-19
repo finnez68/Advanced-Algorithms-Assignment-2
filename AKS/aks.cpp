@@ -214,6 +214,7 @@ static void report(u64 n) {
                 (unsigned long long)g_stats.bound, s, g_stats.reason);
 }
 
+#ifndef AKS_NO_MAIN
 int main(int argc, char** argv) {
     if (argc > 1) {
         for (int i = 1; i < argc; i++) report(std::strtoull(argv[i], nullptr, 10));
@@ -247,3 +248,4 @@ int main(int argc, char** argv) {
 
     return mismatches ? 1 : 0;
 }
+#endif
