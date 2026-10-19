@@ -28,7 +28,6 @@
 #include <vector>
 
 using u64 = uint64_t;
-using u128 = unsigned __int128;
 
 // ---------------------------------------------------------------- helpers
 
@@ -41,18 +40,31 @@ static u64 gcd64(u64 a, u64 b) {
     return a;
 }
 
+static inline u64 addmod(u64 a, u64 b, u64 m) {
+    // Inputs are reduced modulo m; avoid overflow in a+b.
+    return a >= m - b ? a - (m - b) : a + b;
+}
+
 static inline u64 mulmod(u64 a, u64 b, u64 m) {
-    return (u64)((u128)a * b % m);
+    // Portable double-and-add multiplication modulo m.
+    u64 result = 0;
+    a %= m;
+    while (b) {
+        if (b & 1) result = addmod(result, a, m);
+        b >>= 1;
+        if (b) a = addmod(a, a, m);
+    }
+    return result;
 }
 
 // min(a^b, cap + 1), computed without overflow.
 static u64 pow_saturating(u64 a, int b, u64 cap) {
-    u128 r = 1;
+    u64 r = 1;
     for (int i = 0; i < b; i++) {
-        r *= a;  // r <= cap < 2^64 and a <= 2^32 here, so this fits in u128
-        if (r > cap) return cap + 1;
+        if (a && r > cap / a) return cap + 1;
+        r *= a;
     }
-    return (u64)r;
+    return r;
 }
 
 // Step 1: is n = a^b for integers a >= 2, b >= 2 ?
@@ -91,30 +103,13 @@ using Poly = std::vector<u64>;
 // C = A * B  mod (X^r - 1, n)
 static Poly poly_mul(const Poly& A, const Poly& B, u64 n, size_t r) {
     Poly C(r, 0);
-    if (n < (1ULL << 32)) {
-        // Fast path: every coefficient is < 2^32, so each product is < 2^64 and
-        // a sum of up to r products fits in a u128. Reduce once per output
-        // coefficient instead of once per multiply-add.
-        std::vector<u128> acc(r, 0);
-        for (size_t i = 0; i < r; i++) {
-            if (!A[i]) continue;
-            const u64 ai = A[i];
-            for (size_t j = 0; j < r; j++) {
-                size_t k = i + j;
-                if (k >= r) k -= r;
-                acc[k] += (u128)(ai * B[j]);  // ai * B[j] < 2^64: no overflow
-            }
-        }
-        for (size_t k = 0; k < r; k++) C[k] = (u64)(acc[k] % n);
-        return C;
-    }
     for (size_t i = 0; i < r; i++) {
         if (!A[i]) continue;
         for (size_t j = 0; j < r; j++) {
             if (!B[j]) continue;
             size_t k = i + j;
             if (k >= r) k -= r;
-            C[k] = (u64)(((u128)C[k] + mulmod(A[i], B[j], n)) % n);
+            C[k] = addmod(C[k], mulmod(A[i], B[j], n), n);
         }
     }
     return C;
@@ -186,7 +181,7 @@ static bool aks_is_prime(u64 n) {
         Poly lhs = poly_pow_x_plus_a(a, n, n, rr);
         Poly rhs(rr, 0);
         rhs[n % r] = 1;
-        rhs[0] = (u64)(((u128)rhs[0] + a) % n);
+        rhs[0] = addmod(rhs[0], a % n, n);
         g_stats.checked = a;
         if (lhs != rhs) { g_stats.reason = "step 5: congruence failed"; return false; }
     }
