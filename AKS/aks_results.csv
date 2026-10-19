@@ -1,0 +1,2093 @@
+group,label,n,bits,expected,got,correct,r,bound,congruences_checked,deciding_step,time_us
+exhaustive,"all n",0,0,composite,composite,1,0,0,0,"n < 2",2.8
+exhaustive,"all n",1,1,composite,composite,1,0,0,0,"n < 2",0.1
+exhaustive,"all n",2,2,prime,prime,1,3,0,0,"step 4: n <= r",3.9
+exhaustive,"all n",3,2,prime,prime,1,5,0,0,"step 4: n <= r",0.4
+exhaustive,"all n",4,3,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+exhaustive,"all n",5,3,prime,prime,1,7,0,0,"step 4: n <= r",0.9
+exhaustive,"all n",6,3,composite,composite,1,11,0,0,"step 3: shared factor",0.8
+exhaustive,"all n",7,3,prime,prime,1,11,0,0,"step 4: n <= r",0.9
+exhaustive,"all n",8,4,composite,composite,1,0,0,0,"step 1: perfect power",0.5
+exhaustive,"all n",9,4,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",10,4,composite,composite,1,17,0,0,"step 3: shared factor",1.1
+exhaustive,"all n",11,4,prime,prime,1,13,0,0,"step 4: n <= r",1.3
+exhaustive,"all n",12,4,composite,composite,1,17,0,0,"step 3: shared factor",1.0
+exhaustive,"all n",13,4,prime,prime,1,19,0,0,"step 4: n <= r",1.6
+exhaustive,"all n",14,4,composite,composite,1,17,0,0,"step 3: shared factor",1.0
+exhaustive,"all n",15,4,composite,composite,1,19,0,0,"step 3: shared factor",1.2
+exhaustive,"all n",16,5,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",17,5,prime,prime,1,23,0,0,"step 4: n <= r",2.2
+exhaustive,"all n",18,5,composite,composite,1,29,0,0,"step 3: shared factor",1.8
+exhaustive,"all n",19,5,prime,prime,1,23,0,0,"step 4: n <= r",2.2
+exhaustive,"all n",20,5,composite,composite,1,23,0,0,"step 3: shared factor",1.5
+exhaustive,"all n",21,5,composite,composite,1,23,0,0,"step 3: shared factor",1.5
+exhaustive,"all n",22,5,composite,composite,1,25,0,0,"step 3: shared factor",1.5
+exhaustive,"all n",23,5,prime,prime,1,43,0,0,"step 4: n <= r",4.1
+exhaustive,"all n",24,5,composite,composite,1,31,0,0,"step 3: shared factor",1.7
+exhaustive,"all n",25,5,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",26,5,composite,composite,1,29,0,0,"step 3: shared factor",1.7
+exhaustive,"all n",27,5,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+exhaustive,"all n",28,5,composite,composite,1,41,0,0,"step 3: shared factor",2.7
+exhaustive,"all n",29,5,prime,prime,1,41,0,0,"step 4: n <= r",4.1
+exhaustive,"all n",30,5,composite,composite,1,41,0,0,"step 3: shared factor",2.2
+exhaustive,"all n",31,5,prime,prime,1,29,27,27,"step 6: all congruences hold",674.5
+exhaustive,"all n",32,6,composite,composite,1,0,0,0,"step 1: perfect power",0.7
+exhaustive,"all n",33,6,composite,composite,1,43,0,0,"step 3: shared factor",2.3
+exhaustive,"all n",34,6,composite,composite,1,31,0,0,"step 3: shared factor",1.5
+exhaustive,"all n",35,6,composite,composite,1,37,0,0,"step 3: shared factor",1.8
+exhaustive,"all n",36,6,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",37,6,prime,prime,1,29,28,28,"step 6: all congruences hold",701.4
+exhaustive,"all n",38,6,composite,composite,1,47,0,0,"step 3: shared factor",2.2
+exhaustive,"all n",39,6,composite,composite,1,29,0,0,"step 3: shared factor",1.5
+exhaustive,"all n",40,6,composite,composite,1,47,0,0,"step 3: shared factor",2.1
+exhaustive,"all n",41,6,prime,prime,1,47,0,0,"step 4: n <= r",3.4
+exhaustive,"all n",42,6,composite,composite,1,31,0,0,"step 3: shared factor",1.4
+exhaustive,"all n",43,6,prime,prime,1,31,30,30,"step 6: all congruences hold",1303.1
+exhaustive,"all n",44,6,composite,composite,1,31,0,0,"step 3: shared factor",2.9
+exhaustive,"all n",45,6,composite,composite,1,47,0,0,"step 3: shared factor",2.8
+exhaustive,"all n",46,6,composite,composite,1,43,0,0,"step 3: shared factor",2.4
+exhaustive,"all n",47,6,prime,prime,1,41,36,36,"step 6: all congruences hold",1693.9
+exhaustive,"all n",48,6,composite,composite,1,41,0,0,"step 3: shared factor",2.0
+exhaustive,"all n",49,6,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",50,6,composite,composite,1,37,0,0,"step 3: shared factor",2.0
+exhaustive,"all n",51,6,composite,composite,1,53,0,0,"step 3: shared factor",2.6
+exhaustive,"all n",52,6,composite,composite,1,37,0,0,"step 3: shared factor",1.8
+exhaustive,"all n",53,6,prime,prime,1,41,37,37,"step 6: all congruences hold",1936.7
+exhaustive,"all n",54,6,composite,composite,1,37,0,0,"step 3: shared factor",1.7
+exhaustive,"all n",55,6,composite,composite,1,37,0,0,"step 3: shared factor",1.8
+exhaustive,"all n",56,6,composite,composite,1,37,0,0,"step 3: shared factor",1.7
+exhaustive,"all n",57,6,composite,composite,1,37,0,0,"step 3: shared factor",1.7
+exhaustive,"all n",58,6,composite,composite,1,41,0,0,"step 3: shared factor",1.8
+exhaustive,"all n",59,6,prime,prime,1,37,36,36,"step 6: all congruences hold",2467.4
+exhaustive,"all n",60,6,composite,composite,1,41,0,0,"step 3: shared factor",1.9
+exhaustive,"all n",61,6,prime,prime,1,37,36,36,"step 6: all congruences hold",2644.0
+exhaustive,"all n",62,6,composite,composite,1,43,0,0,"step 3: shared factor",2.1
+exhaustive,"all n",63,6,composite,composite,1,41,0,0,"step 3: shared factor",1.9
+exhaustive,"all n",64,7,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",65,7,composite,composite,1,41,0,0,"step 3: shared factor",2.3
+exhaustive,"all n",66,7,composite,composite,1,47,0,0,"step 3: shared factor",2.2
+exhaustive,"all n",67,7,prime,prime,1,41,39,39,"step 6: all congruences hold",2896.8
+exhaustive,"all n",68,7,composite,composite,1,61,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",69,7,composite,composite,1,41,0,0,"step 3: shared factor",2.1
+exhaustive,"all n",70,7,composite,composite,1,41,0,0,"step 3: shared factor",1.8
+exhaustive,"all n",71,7,prime,prime,1,41,39,39,"step 6: all congruences hold",3635.0
+exhaustive,"all n",72,7,composite,composite,1,43,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",73,7,prime,prime,1,43,41,41,"step 6: all congruences hold",4029.9
+exhaustive,"all n",74,7,composite,composite,1,53,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",75,7,composite,composite,1,41,0,0,"step 3: shared factor",2.2
+exhaustive,"all n",76,7,composite,composite,1,41,0,0,"step 3: shared factor",2.0
+exhaustive,"all n",77,7,composite,composite,1,43,0,0,"step 3: shared factor",2.4
+exhaustive,"all n",78,7,composite,composite,1,47,0,0,"step 3: shared factor",2.1
+exhaustive,"all n",79,7,prime,prime,1,53,46,46,"step 6: all congruences hold",5782.5
+exhaustive,"all n",80,7,composite,composite,1,47,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",81,7,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",82,7,composite,composite,1,47,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",83,7,prime,prime,1,59,49,49,"step 6: all congruences hold",6867.1
+exhaustive,"all n",84,7,composite,composite,1,53,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",85,7,composite,composite,1,47,0,0,"step 3: shared factor",2.8
+exhaustive,"all n",86,7,composite,composite,1,47,0,0,"step 3: shared factor",2.3
+exhaustive,"all n",87,7,composite,composite,1,47,0,0,"step 3: shared factor",2.4
+exhaustive,"all n",88,7,composite,composite,1,47,0,0,"step 3: shared factor",2.2
+exhaustive,"all n",89,7,prime,prime,1,43,42,42,"step 6: all congruences hold",5552.2
+exhaustive,"all n",90,7,composite,composite,1,47,0,0,"step 3: shared factor",2.3
+exhaustive,"all n",91,7,composite,composite,1,47,0,0,"step 3: shared factor",2.6
+exhaustive,"all n",92,7,composite,composite,1,47,0,0,"step 3: shared factor",2.3
+exhaustive,"all n",93,7,composite,composite,1,59,0,0,"step 3: shared factor",3.2
+exhaustive,"all n",94,7,composite,composite,1,53,0,0,"step 3: shared factor",2.6
+exhaustive,"all n",95,7,composite,composite,1,67,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",96,7,composite,composite,1,59,0,0,"step 3: shared factor",2.7
+exhaustive,"all n",97,7,prime,prime,1,59,51,51,"step 6: all congruences hold",8817.4
+exhaustive,"all n",98,7,composite,composite,1,53,0,0,"step 3: shared factor",3.4
+exhaustive,"all n",99,7,composite,composite,1,47,0,0,"step 3: shared factor",2.7
+exhaustive,"all n",100,7,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",101,7,prime,prime,1,53,49,49,"step 6: all congruences hold",8927.3
+exhaustive,"all n",102,7,composite,composite,1,59,0,0,"step 3: shared factor",3.6
+exhaustive,"all n",103,7,prime,prime,1,53,49,49,"step 6: all congruences hold",9524.2
+exhaustive,"all n",104,7,composite,composite,1,47,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",105,7,composite,composite,1,47,0,0,"step 3: shared factor",2.7
+exhaustive,"all n",106,7,composite,composite,1,59,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",107,7,prime,prime,1,47,46,46,"step 6: all congruences hold",9075.3
+exhaustive,"all n",108,7,composite,composite,1,53,0,0,"step 3: shared factor",3.4
+exhaustive,"all n",109,7,prime,prime,1,47,46,46,"step 6: all congruences hold",9416.8
+exhaustive,"all n",110,7,composite,composite,1,81,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",111,7,composite,composite,1,53,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",112,7,composite,composite,1,61,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",113,7,prime,prime,1,59,52,52,"step 6: all congruences hold",13291.9
+exhaustive,"all n",114,7,composite,composite,1,53,0,0,"step 3: shared factor",3.4
+exhaustive,"all n",115,7,composite,composite,1,59,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",116,7,composite,composite,1,61,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",117,7,composite,composite,1,67,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",118,7,composite,composite,1,53,0,0,"step 3: shared factor",2.4
+exhaustive,"all n",119,7,composite,composite,1,81,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",120,7,composite,composite,1,53,0,0,"step 3: shared factor",2.3
+exhaustive,"all n",121,7,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",122,7,composite,composite,1,79,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",123,7,composite,composite,1,71,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",124,7,composite,composite,1,53,0,0,"step 3: shared factor",2.7
+exhaustive,"all n",125,7,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",126,7,composite,composite,1,53,0,0,"step 3: shared factor",2.4
+exhaustive,"all n",127,7,prime,prime,1,53,51,51,"step 6: all congruences hold",14973.3
+exhaustive,"all n",128,8,composite,composite,1,0,0,0,"step 1: perfect power",1.5
+exhaustive,"all n",129,8,composite,composite,1,59,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",130,8,composite,composite,1,67,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",131,8,prime,prime,1,59,54,54,"step 6: all congruences hold",15190.1
+exhaustive,"all n",132,8,composite,composite,1,53,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",133,8,composite,composite,1,53,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",134,8,composite,composite,1,71,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",135,8,composite,composite,1,73,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",136,8,composite,composite,1,59,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",137,8,prime,prime,1,53,52,52,"step 6: all congruences hold",15073.6
+exhaustive,"all n",138,8,composite,composite,1,53,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",139,8,prime,prime,1,53,52,52,"step 6: all congruences hold",15142.4
+exhaustive,"all n",140,8,composite,composite,1,53,0,0,"step 3: shared factor",3.3
+exhaustive,"all n",141,8,composite,composite,1,53,0,0,"step 3: shared factor",3.2
+exhaustive,"all n",142,8,composite,composite,1,59,0,0,"step 3: shared factor",3.3
+exhaustive,"all n",143,8,composite,composite,1,83,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",144,8,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",145,8,composite,composite,1,53,0,0,"step 3: shared factor",3.3
+exhaustive,"all n",146,8,composite,composite,1,67,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",147,8,composite,composite,1,53,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",148,8,composite,composite,1,59,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",149,8,prime,prime,1,59,55,55,"step 6: all congruences hold",20623.0
+exhaustive,"all n",150,8,composite,composite,1,59,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",151,8,prime,prime,1,59,56,56,"step 6: all congruences hold",20224.3
+exhaustive,"all n",152,8,composite,composite,1,59,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",153,8,composite,composite,1,61,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",154,8,composite,composite,1,67,0,0,"step 3: shared factor",3.3
+exhaustive,"all n",155,8,composite,composite,1,59,0,0,"step 3: shared factor",3.6
+exhaustive,"all n",156,8,composite,composite,1,59,0,0,"step 3: shared factor",3.0
+exhaustive,"all n",157,8,prime,prime,1,59,56,56,"step 6: all congruences hold",21307.0
+exhaustive,"all n",158,8,composite,composite,1,59,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",159,8,composite,composite,1,73,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",160,8,composite,composite,1,59,0,0,"step 3: shared factor",2.8
+exhaustive,"all n",161,8,composite,composite,1,59,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",162,8,composite,composite,1,59,0,0,"step 3: shared factor",2.9
+exhaustive,"all n",163,8,prime,prime,1,71,62,62,"step 6: all congruences hold",27179.1
+exhaustive,"all n",164,8,composite,composite,1,71,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",165,8,composite,composite,1,59,0,0,"step 3: shared factor",3.1
+exhaustive,"all n",166,8,composite,composite,1,61,0,0,"step 3: shared factor",3.2
+exhaustive,"all n",167,8,prime,prime,1,101,74,74,"step 6: all congruences hold",38138.2
+exhaustive,"all n",168,8,composite,composite,1,59,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",169,8,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",170,8,composite,composite,1,59,0,0,"step 3: shared factor",3.4
+exhaustive,"all n",171,8,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",172,8,composite,composite,1,59,0,0,"step 3: shared factor",3.2
+exhaustive,"all n",173,8,prime,prime,1,59,57,57,"step 6: all congruences hold",24668.6
+exhaustive,"all n",174,8,composite,composite,1,59,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",175,8,composite,composite,1,67,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",176,8,composite,composite,1,61,0,0,"step 3: shared factor",3.2
+exhaustive,"all n",177,8,composite,composite,1,61,0,0,"step 3: shared factor",3.6
+exhaustive,"all n",178,8,composite,composite,1,67,0,0,"step 3: shared factor",3.4
+exhaustive,"all n",179,8,prime,prime,1,59,57,57,"step 6: all congruences hold",26834.9
+exhaustive,"all n",180,8,composite,composite,1,67,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",181,8,prime,prime,1,61,59,59,"step 6: all congruences hold",29382.1
+exhaustive,"all n",182,8,composite,composite,1,67,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",183,8,composite,composite,1,59,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",184,8,composite,composite,1,67,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",185,8,composite,composite,1,59,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",186,8,composite,composite,1,71,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",187,8,composite,composite,1,59,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",188,8,composite,composite,1,59,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",189,8,composite,composite,1,61,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",190,8,composite,composite,1,59,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",191,8,prime,prime,1,59,58,58,"step 6: all congruences hold",33618.4
+exhaustive,"all n",192,8,composite,composite,1,79,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",193,8,prime,prime,1,61,59,59,"step 6: all congruences hold",28571.5
+exhaustive,"all n",194,8,composite,composite,1,71,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",195,8,composite,composite,1,59,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",196,8,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",197,8,prime,prime,1,67,62,62,"step 6: all congruences hold",41002.7
+exhaustive,"all n",198,8,composite,composite,1,71,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",199,8,prime,prime,1,73,65,65,"step 6: all congruences hold",45690.7
+exhaustive,"all n",200,8,composite,composite,1,61,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",201,8,composite,composite,1,61,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",202,8,composite,composite,1,89,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",203,8,composite,composite,1,67,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",204,8,composite,composite,1,71,0,0,"step 3: shared factor",3.4
+exhaustive,"all n",205,8,composite,composite,1,71,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",206,8,composite,composite,1,73,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",207,8,composite,composite,1,71,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",208,8,composite,composite,1,67,0,0,"step 3: shared factor",3.3
+exhaustive,"all n",209,8,composite,composite,1,61,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",210,8,composite,composite,1,71,0,0,"step 3: shared factor",3.2
+exhaustive,"all n",211,8,prime,prime,1,71,65,65,"step 6: all congruences hold",47462.6
+exhaustive,"all n",212,8,composite,composite,1,67,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",213,8,composite,composite,1,61,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",214,8,composite,composite,1,61,0,0,"step 3: shared factor",3.6
+exhaustive,"all n",215,8,composite,composite,1,97,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",216,8,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",217,8,composite,composite,1,79,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",218,8,composite,composite,1,79,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",219,8,composite,composite,1,67,0,0,"step 3: shared factor",3.8
+exhaustive,"all n",220,8,composite,composite,1,71,0,0,"step 3: shared factor",3.8
+exhaustive,"all n",221,8,composite,composite,1,67,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",222,8,composite,composite,1,83,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",223,8,prime,prime,1,83,71,71,"step 6: all congruences hold",60259.0
+exhaustive,"all n",224,8,composite,composite,1,71,0,0,"step 3: shared factor",11.8
+exhaustive,"all n",225,8,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",226,8,composite,composite,1,71,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",227,8,prime,prime,1,103,80,80,"step 6: all congruences hold",86578.2
+exhaustive,"all n",228,8,composite,composite,1,79,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",229,8,prime,prime,1,67,64,64,"step 6: all congruences hold",45491.3
+exhaustive,"all n",230,8,composite,composite,1,73,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",231,8,composite,composite,1,97,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",232,8,composite,composite,1,67,0,0,"step 3: shared factor",3.5
+exhaustive,"all n",233,8,prime,prime,1,67,64,64,"step 6: all congruences hold",47623.4
+exhaustive,"all n",234,8,composite,composite,1,71,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",235,8,composite,composite,1,67,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",236,8,composite,composite,1,89,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",237,8,composite,composite,1,83,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",238,8,composite,composite,1,83,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",239,8,prime,prime,1,73,68,68,"step 6: all congruences hold",58073.7
+exhaustive,"all n",240,8,composite,composite,1,79,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",241,8,prime,prime,1,71,67,67,"step 6: all congruences hold",57831.7
+exhaustive,"all n",242,8,composite,composite,1,67,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",243,8,composite,composite,1,0,0,0,"step 1: perfect power",0.7
+exhaustive,"all n",244,8,composite,composite,1,71,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",245,8,composite,composite,1,67,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",246,8,composite,composite,1,71,0,0,"step 3: shared factor",3.6
+exhaustive,"all n",247,8,composite,composite,1,67,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",248,8,composite,composite,1,71,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",249,8,composite,composite,1,67,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",250,8,composite,composite,1,73,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",251,8,prime,prime,1,67,65,65,"step 6: all congruences hold",58188.5
+exhaustive,"all n",252,8,composite,composite,1,67,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",253,8,composite,composite,1,73,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",254,8,composite,composite,1,83,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",255,8,composite,composite,1,71,0,0,"step 3: shared factor",3.6
+exhaustive,"all n",256,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",257,9,prime,prime,1,71,67,67,"step 6: all congruences hold",42293.4
+exhaustive,"all n",258,9,composite,composite,1,67,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",259,9,composite,composite,1,73,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",260,9,composite,composite,1,71,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",261,9,composite,composite,1,73,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",262,9,composite,composite,1,67,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",263,9,prime,prime,1,73,69,69,"step 6: all congruences hold",49095.0
+exhaustive,"all n",264,9,composite,composite,1,67,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",265,9,composite,composite,1,71,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",266,9,composite,composite,1,71,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",267,9,composite,composite,1,79,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",268,9,composite,composite,1,71,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",269,9,prime,prime,1,71,68,68,"step 6: all congruences hold",50497.9
+exhaustive,"all n",270,9,composite,composite,1,67,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",271,9,prime,prime,1,79,72,72,"step 6: all congruences hold",54067.8
+exhaustive,"all n",272,9,composite,composite,1,71,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",273,9,composite,composite,1,83,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",274,9,composite,composite,1,71,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",275,9,composite,composite,1,67,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",276,9,composite,composite,1,71,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",277,9,prime,prime,1,73,69,69,"step 6: all congruences hold",50924.1
+exhaustive,"all n",278,9,composite,composite,1,71,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",279,9,composite,composite,1,73,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",280,9,composite,composite,1,71,0,0,"step 3: shared factor",3.8
+exhaustive,"all n",281,9,prime,prime,1,71,69,69,"step 6: all congruences hold",50088.8
+exhaustive,"all n",282,9,composite,composite,1,71,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",283,9,prime,prime,1,83,74,74,"step 6: all congruences hold",64363.6
+exhaustive,"all n",284,9,composite,composite,1,79,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",285,9,composite,composite,1,79,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",286,9,composite,composite,1,89,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",287,9,composite,composite,1,73,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",288,9,composite,composite,1,83,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",289,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",290,9,composite,composite,1,79,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",291,9,composite,composite,1,71,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",292,9,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",293,9,prime,prime,1,89,77,77,"step 6: all congruences hold",75349.0
+exhaustive,"all n",294,9,composite,composite,1,83,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",295,9,composite,composite,1,71,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",296,9,composite,composite,1,79,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",297,9,composite,composite,1,71,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",298,9,composite,composite,1,89,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",299,9,composite,composite,1,83,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",300,9,composite,composite,1,79,0,0,"step 3: shared factor",3.8
+exhaustive,"all n",301,9,composite,composite,1,83,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",302,9,composite,composite,1,83,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",303,9,composite,composite,1,73,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",304,9,composite,composite,1,83,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",305,9,composite,composite,1,71,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",306,9,composite,composite,1,71,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",307,9,prime,prime,1,73,71,71,"step 6: all congruences hold",68037.7
+exhaustive,"all n",308,9,composite,composite,1,89,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",309,9,composite,composite,1,83,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",310,9,composite,composite,1,89,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",311,9,prime,prime,1,79,74,74,"step 6: all congruences hold",73411.6
+exhaustive,"all n",312,9,composite,composite,1,71,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",313,9,prime,prime,1,89,78,78,"step 6: all congruences hold",95255.5
+exhaustive,"all n",314,9,composite,composite,1,79,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",315,9,composite,composite,1,71,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",316,9,composite,composite,1,83,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",317,9,prime,prime,1,71,70,70,"step 6: all congruences hold",75202.5
+exhaustive,"all n",318,9,composite,composite,1,73,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",319,9,composite,composite,1,71,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",320,9,composite,composite,1,73,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",321,9,composite,composite,1,73,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",322,9,composite,composite,1,79,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",323,9,composite,composite,1,73,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",324,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",325,9,composite,composite,1,73,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",326,9,composite,composite,1,71,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",327,9,composite,composite,1,89,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",328,9,composite,composite,1,71,0,0,"step 3: shared factor",3.9
+exhaustive,"all n",329,9,composite,composite,1,83,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",330,9,composite,composite,1,89,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",331,9,prime,prime,1,73,72,72,"step 6: all congruences hold",71657.1
+exhaustive,"all n",332,9,composite,composite,1,73,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",333,9,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",334,9,composite,composite,1,73,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",335,9,composite,composite,1,157,0,0,"step 3: shared factor",11.4
+exhaustive,"all n",336,9,composite,composite,1,73,0,0,"step 3: shared factor",3.7
+exhaustive,"all n",337,9,prime,prime,1,73,72,72,"step 6: all congruences hold",77536.2
+exhaustive,"all n",338,9,composite,composite,1,83,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",339,9,composite,composite,1,73,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",340,9,composite,composite,1,83,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",341,9,composite,composite,1,89,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",342,9,composite,composite,1,89,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",343,9,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+exhaustive,"all n",344,9,composite,composite,1,79,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",345,9,composite,composite,1,73,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",346,9,composite,composite,1,79,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",347,9,prime,prime,1,83,77,77,"step 6: all congruences hold",101117.9
+exhaustive,"all n",348,9,composite,composite,1,97,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",349,9,prime,prime,1,89,80,80,"step 6: all congruences hold",111076.2
+exhaustive,"all n",350,9,composite,composite,1,73,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",351,9,composite,composite,1,73,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",352,9,composite,composite,1,73,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",353,9,prime,prime,1,79,75,75,"step 6: all congruences hold",91968.2
+exhaustive,"all n",354,9,composite,composite,1,73,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",355,9,composite,composite,1,79,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",356,9,composite,composite,1,83,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",357,9,composite,composite,1,103,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",358,9,composite,composite,1,101,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",359,9,prime,prime,1,79,75,75,"step 6: all congruences hold",93506.4
+exhaustive,"all n",360,9,composite,composite,1,103,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",361,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",362,9,composite,composite,1,89,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",363,9,composite,composite,1,79,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",364,9,composite,composite,1,79,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",365,9,composite,composite,1,97,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",366,9,composite,composite,1,83,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",367,9,prime,prime,1,83,78,78,"step 6: all congruences hold",107597.2
+exhaustive,"all n",368,9,composite,composite,1,113,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",369,9,composite,composite,1,79,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",370,9,composite,composite,1,79,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",371,9,composite,composite,1,83,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",372,9,composite,composite,1,107,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",373,9,prime,prime,1,97,84,84,"step 6: all congruences hold",148847.5
+exhaustive,"all n",374,9,composite,composite,1,83,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",375,9,composite,composite,1,79,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",376,9,composite,composite,1,79,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",377,9,composite,composite,1,83,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",378,9,composite,composite,1,83,0,0,"step 3: shared factor",4.1
+exhaustive,"all n",379,9,prime,prime,1,79,76,76,"step 6: all congruences hold",106080.1
+exhaustive,"all n",380,9,composite,composite,1,89,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",381,9,composite,composite,1,97,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",382,9,composite,composite,1,79,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",383,9,prime,prime,1,89,81,81,"step 6: all congruences hold",139911.9
+exhaustive,"all n",384,9,composite,composite,1,79,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",385,9,composite,composite,1,83,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",386,9,composite,composite,1,79,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",387,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",388,9,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",389,9,prime,prime,1,83,78,78,"step 6: all congruences hold",93788.5
+exhaustive,"all n",390,9,composite,composite,1,79,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",391,9,composite,composite,1,79,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",392,9,composite,composite,1,83,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",393,9,composite,composite,1,79,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",394,9,composite,composite,1,83,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",395,9,composite,composite,1,97,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",396,9,composite,composite,1,101,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",397,9,prime,prime,1,89,81,81,"step 6: all congruences hold",113386.4
+exhaustive,"all n",398,9,composite,composite,1,79,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",399,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",400,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",401,9,prime,prime,1,79,77,77,"step 6: all congruences hold",91489.0
+exhaustive,"all n",402,9,composite,composite,1,79,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",403,9,composite,composite,1,83,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",404,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",405,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",406,9,composite,composite,1,83,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",407,9,composite,composite,1,89,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",408,9,composite,composite,1,83,0,0,"step 3: shared factor",4.2
+exhaustive,"all n",409,9,prime,prime,1,97,86,86,"step 6: all congruences hold",144251.9
+exhaustive,"all n",410,9,composite,composite,1,89,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",411,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",412,9,composite,composite,1,83,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",413,9,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",414,9,composite,composite,1,89,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",415,9,composite,composite,1,89,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",416,9,composite,composite,1,89,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",417,9,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",418,9,composite,composite,1,89,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",419,9,prime,prime,1,89,82,82,"step 6: all congruences hold",129442.5
+exhaustive,"all n",420,9,composite,composite,1,83,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",421,9,prime,prime,1,83,79,79,"step 6: all congruences hold",122267.4
+exhaustive,"all n",422,9,composite,composite,1,89,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",423,9,composite,composite,1,79,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",424,9,composite,composite,1,79,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",425,9,composite,composite,1,79,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",426,9,composite,composite,1,89,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",427,9,composite,composite,1,97,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",428,9,composite,composite,1,83,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",429,9,composite,composite,1,79,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",430,9,composite,composite,1,79,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",431,9,prime,prime,1,89,83,83,"step 6: all congruences hold",152447.0
+exhaustive,"all n",432,9,composite,composite,1,79,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",433,9,prime,prime,1,83,80,80,"step 6: all congruences hold",130695.3
+exhaustive,"all n",434,9,composite,composite,1,79,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",435,9,composite,composite,1,83,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",436,9,composite,composite,1,107,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",437,9,composite,composite,1,83,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",438,9,composite,composite,1,79,0,0,"step 3: shared factor",4.0
+exhaustive,"all n",439,9,prime,prime,1,83,80,80,"step 6: all congruences hold",137309.7
+exhaustive,"all n",440,9,composite,composite,1,113,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",441,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",442,9,composite,composite,1,79,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",443,9,prime,prime,1,79,78,78,"step 6: all congruences hold",129037.7
+exhaustive,"all n",444,9,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",445,9,composite,composite,1,97,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",446,9,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",447,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",448,9,composite,composite,1,79,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",449,9,prime,prime,1,79,78,78,"step 6: all congruences hold",130966.8
+exhaustive,"all n",450,9,composite,composite,1,83,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",451,9,composite,composite,1,89,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",452,9,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",453,9,composite,composite,1,121,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",454,9,composite,composite,1,79,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",455,9,composite,composite,1,79,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",456,9,composite,composite,1,97,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",457,9,prime,prime,1,83,81,81,"step 6: all congruences hold",145992.0
+exhaustive,"all n",458,9,composite,composite,1,83,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",459,9,composite,composite,1,89,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",460,9,composite,composite,1,83,0,0,"step 3: shared factor",3.8
+exhaustive,"all n",461,9,prime,prime,1,83,81,81,"step 6: all congruences hold",146100.1
+exhaustive,"all n",462,9,composite,composite,1,83,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",463,9,prime,prime,1,101,89,89,"step 6: all congruences hold",199633.3
+exhaustive,"all n",464,9,composite,composite,1,89,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",465,9,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",466,9,composite,composite,1,103,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",467,9,prime,prime,1,83,81,81,"step 6: all congruences hold",136725.3
+exhaustive,"all n",468,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",469,9,composite,composite,1,83,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",470,9,composite,composite,1,83,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",471,9,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",472,9,composite,composite,1,83,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",473,9,composite,composite,1,83,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",474,9,composite,composite,1,89,0,0,"step 3: shared factor",4.3
+exhaustive,"all n",475,9,composite,composite,1,83,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",476,9,composite,composite,1,89,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",477,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",478,9,composite,composite,1,89,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",479,9,prime,prime,1,101,90,90,"step 6: all congruences hold",206746.7
+exhaustive,"all n",480,9,composite,composite,1,89,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",481,9,composite,composite,1,83,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",482,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",483,9,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",484,9,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",485,9,composite,composite,1,113,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",486,9,composite,composite,1,83,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",487,9,prime,prime,1,83,81,81,"step 6: all congruences hold",152048.7
+exhaustive,"all n",488,9,composite,composite,1,83,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",489,9,composite,composite,1,83,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",490,9,composite,composite,1,97,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",491,9,prime,prime,1,83,81,81,"step 6: all congruences hold",150310.8
+exhaustive,"all n",492,9,composite,composite,1,97,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",493,9,composite,composite,1,89,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",494,9,composite,composite,1,83,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",495,9,composite,composite,1,83,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",496,9,composite,composite,1,89,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",497,9,composite,composite,1,101,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",498,9,composite,composite,1,97,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",499,9,prime,prime,1,89,85,85,"step 6: all congruences hold",185021.7
+exhaustive,"all n",500,9,composite,composite,1,83,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",501,9,composite,composite,1,89,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",502,9,composite,composite,1,97,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",503,9,prime,prime,1,83,82,82,"step 6: all congruences hold",170390.2
+exhaustive,"all n",504,9,composite,composite,1,83,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",505,9,composite,composite,1,89,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",506,9,composite,composite,1,83,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",507,9,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",508,9,composite,composite,1,89,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",509,9,prime,prime,1,131,103,103,"step 6: all congruences hold",389612.1
+exhaustive,"all n",510,9,composite,composite,1,89,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",511,9,composite,composite,1,83,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",512,10,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+exhaustive,"all n",513,10,composite,composite,1,83,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",514,10,composite,composite,1,97,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",515,10,composite,composite,1,89,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",516,10,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",517,10,composite,composite,1,83,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",518,10,composite,composite,1,83,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",519,10,composite,composite,1,89,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",520,10,composite,composite,1,83,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",521,10,prime,prime,1,89,85,85,"step 6: all congruences hold",119858.3
+exhaustive,"all n",522,10,composite,composite,1,83,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",523,10,prime,prime,1,97,89,89,"step 6: all congruences hold",140763.2
+exhaustive,"all n",524,10,composite,composite,1,97,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",525,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",526,10,composite,composite,1,97,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",527,10,composite,composite,1,89,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",528,10,composite,composite,1,89,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",529,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",530,10,composite,composite,1,83,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",531,10,composite,composite,1,89,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",532,10,composite,composite,1,83,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",533,10,composite,composite,1,101,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",534,10,composite,composite,1,101,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",535,10,composite,composite,1,103,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",536,10,composite,composite,1,103,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",537,10,composite,composite,1,89,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",538,10,composite,composite,1,113,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",539,10,composite,composite,1,101,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",540,10,composite,composite,1,89,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",541,10,prime,prime,1,89,86,86,"step 6: all congruences hold",131829.6
+exhaustive,"all n",542,10,composite,composite,1,97,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",543,10,composite,composite,1,97,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",544,10,composite,composite,1,97,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",545,10,composite,composite,1,97,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",546,10,composite,composite,1,113,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",547,10,prime,prime,1,89,86,86,"step 6: all congruences hold",138515.2
+exhaustive,"all n",548,10,composite,composite,1,89,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",549,10,composite,composite,1,89,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",550,10,composite,composite,1,103,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",551,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",552,10,composite,composite,1,107,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",553,10,composite,composite,1,89,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",554,10,composite,composite,1,127,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",555,10,composite,composite,1,101,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",556,10,composite,composite,1,97,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",557,10,prime,prime,1,89,86,86,"step 6: all congruences hold",141662.9
+exhaustive,"all n",558,10,composite,composite,1,89,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",559,10,composite,composite,1,97,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",560,10,composite,composite,1,89,0,0,"step 3: shared factor",4.7
+exhaustive,"all n",561,10,composite,composite,1,89,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",562,10,composite,composite,1,89,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",563,10,prime,prime,1,89,86,86,"step 6: all congruences hold",145448.9
+exhaustive,"all n",564,10,composite,composite,1,89,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",565,10,composite,composite,1,89,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",566,10,composite,composite,1,101,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",567,10,composite,composite,1,89,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",568,10,composite,composite,1,97,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",569,10,prime,prime,1,89,86,86,"step 6: all congruences hold",149178.2
+exhaustive,"all n",570,10,composite,composite,1,113,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",571,10,prime,prime,1,101,92,92,"step 6: all congruences hold",195348.5
+exhaustive,"all n",572,10,composite,composite,1,89,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",573,10,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",574,10,composite,composite,1,121,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",575,10,composite,composite,1,89,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",576,10,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",577,10,prime,prime,1,89,87,87,"step 6: all congruences hold",149800.3
+exhaustive,"all n",578,10,composite,composite,1,101,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",579,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",580,10,composite,composite,1,89,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",581,10,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",582,10,composite,composite,1,89,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",583,10,composite,composite,1,125,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",584,10,composite,composite,1,109,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",585,10,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",586,10,composite,composite,1,103,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",587,10,prime,prime,1,97,91,91,"step 6: all congruences hold",188940.1
+exhaustive,"all n",588,10,composite,composite,1,89,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",589,10,composite,composite,1,97,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",590,10,composite,composite,1,89,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",591,10,composite,composite,1,101,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",592,10,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",593,10,prime,prime,1,89,87,87,"step 6: all congruences hold",164848.8
+exhaustive,"all n",594,10,composite,composite,1,89,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",595,10,composite,composite,1,89,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",596,10,composite,composite,1,89,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",597,10,composite,composite,1,89,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",598,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",599,10,prime,prime,1,89,87,87,"step 6: all congruences hold",170050.9
+exhaustive,"all n",600,10,composite,composite,1,89,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",601,10,prime,prime,1,103,94,94,"step 6: all congruences hold",224660.3
+exhaustive,"all n",602,10,composite,composite,1,103,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",603,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",604,10,composite,composite,1,89,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",605,10,composite,composite,1,97,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",606,10,composite,composite,1,107,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",607,10,prime,prime,1,107,96,96,"step 6: all congruences hold",252417.9
+exhaustive,"all n",608,10,composite,composite,1,89,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",609,10,composite,composite,1,89,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",610,10,composite,composite,1,89,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",611,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",612,10,composite,composite,1,107,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",613,10,prime,prime,1,101,93,93,"step 6: all congruences hold",231520.6
+exhaustive,"all n",614,10,composite,composite,1,101,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",615,10,composite,composite,1,107,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",616,10,composite,composite,1,89,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",617,10,prime,prime,1,89,87,87,"step 6: all congruences hold",178821.8
+exhaustive,"all n",618,10,composite,composite,1,101,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",619,10,prime,prime,1,97,91,91,"step 6: all congruences hold",223174.8
+exhaustive,"all n",620,10,composite,composite,1,89,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",621,10,composite,composite,1,97,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",622,10,composite,composite,1,97,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",623,10,composite,composite,1,97,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",624,10,composite,composite,1,101,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",625,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",626,10,composite,composite,1,89,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",627,10,composite,composite,1,125,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",628,10,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",629,10,composite,composite,1,89,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",630,10,composite,composite,1,89,0,0,"step 3: shared factor",4.5
+exhaustive,"all n",631,10,prime,prime,1,107,96,96,"step 6: all congruences hold",277220.5
+exhaustive,"all n",632,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",633,10,composite,composite,1,101,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",634,10,composite,composite,1,101,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",635,10,composite,composite,1,101,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",636,10,composite,composite,1,89,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",637,10,composite,composite,1,89,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",638,10,composite,composite,1,89,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",639,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",640,10,composite,composite,1,97,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",641,10,prime,prime,1,97,92,92,"step 6: all congruences hold",207549.0
+exhaustive,"all n",642,10,composite,composite,1,89,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",643,10,prime,prime,1,109,97,97,"step 6: all congruences hold",287183.9
+exhaustive,"all n",644,10,composite,composite,1,101,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",645,10,composite,composite,1,113,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",646,10,composite,composite,1,89,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",647,10,prime,prime,1,89,88,88,"step 6: all congruences hold",193400.2
+exhaustive,"all n",648,10,composite,composite,1,101,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",649,10,composite,composite,1,89,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",650,10,composite,composite,1,89,0,0,"step 3: shared factor",4.8
+exhaustive,"all n",651,10,composite,composite,1,89,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",652,10,composite,composite,1,89,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",653,10,prime,prime,1,89,88,88,"step 6: all congruences hold",198518.6
+exhaustive,"all n",654,10,composite,composite,1,89,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",655,10,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",656,10,composite,composite,1,89,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",657,10,composite,composite,1,101,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",658,10,composite,composite,1,89,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",659,10,prime,prime,1,101,94,94,"step 6: all congruences hold",259503.1
+exhaustive,"all n",660,10,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",661,10,prime,prime,1,89,88,88,"step 6: all congruences hold",200562.3
+exhaustive,"all n",662,10,composite,composite,1,97,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",663,10,composite,composite,1,103,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",664,10,composite,composite,1,89,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",665,10,composite,composite,1,97,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",666,10,composite,composite,1,89,0,0,"step 3: shared factor",4.4
+exhaustive,"all n",667,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",668,10,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",669,10,composite,composite,1,97,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",670,10,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",671,10,composite,composite,1,103,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",672,10,composite,composite,1,97,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",673,10,prime,prime,1,101,94,94,"step 6: all congruences hold",264775.6
+exhaustive,"all n",674,10,composite,composite,1,97,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",675,10,composite,composite,1,113,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",676,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",677,10,prime,prime,1,121,99,99,"step 6: all congruences hold",381939.0
+exhaustive,"all n",678,10,composite,composite,1,101,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",679,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",680,10,composite,composite,1,101,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",681,10,composite,composite,1,101,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",682,10,composite,composite,1,137,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",683,10,prime,prime,1,103,96,96,"step 6: all congruences hold",292578.8
+exhaustive,"all n",684,10,composite,composite,1,97,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",685,10,composite,composite,1,103,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",686,10,composite,composite,1,97,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",687,10,composite,composite,1,107,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",688,10,composite,composite,1,103,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",689,10,composite,composite,1,97,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",690,10,composite,composite,1,113,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",691,10,prime,prime,1,109,99,99,"step 6: all congruences hold",323933.7
+exhaustive,"all n",692,10,composite,composite,1,97,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",693,10,composite,composite,1,97,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",694,10,composite,composite,1,97,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",695,10,composite,composite,1,101,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",696,10,composite,composite,1,97,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",697,10,composite,composite,1,107,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",698,10,composite,composite,1,109,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",699,10,composite,composite,1,101,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",700,10,composite,composite,1,97,0,0,"step 3: shared factor",5.0
+exhaustive,"all n",701,10,prime,prime,1,107,98,98,"step 6: all congruences hold",340652.0
+exhaustive,"all n",702,10,composite,composite,1,97,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",703,10,composite,composite,1,103,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",704,10,composite,composite,1,101,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",705,10,composite,composite,1,97,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",706,10,composite,composite,1,103,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",707,10,composite,composite,1,107,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",708,10,composite,composite,1,97,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",709,10,prime,prime,1,101,95,95,"step 6: all congruences hold",281249.2
+exhaustive,"all n",710,10,composite,composite,1,101,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",711,10,composite,composite,1,109,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",712,10,composite,composite,1,107,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",713,10,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",714,10,composite,composite,1,101,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",715,10,composite,composite,1,101,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",716,10,composite,composite,1,97,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",717,10,composite,composite,1,97,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",718,10,composite,composite,1,97,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",719,10,prime,prime,1,97,93,93,"step 6: all congruences hold",285117.9
+exhaustive,"all n",720,10,composite,composite,1,97,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",721,10,composite,composite,1,109,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",722,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",723,10,composite,composite,1,109,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",724,10,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",725,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",726,10,composite,composite,1,103,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",727,10,prime,prime,1,103,97,97,"step 6: all congruences hold",346415.9
+exhaustive,"all n",728,10,composite,composite,1,121,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",729,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",730,10,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",731,10,composite,composite,1,127,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",732,10,composite,composite,1,103,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",733,10,prime,prime,1,101,96,96,"step 6: all congruences hold",313889.1
+exhaustive,"all n",734,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",735,10,composite,composite,1,97,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",736,10,composite,composite,1,97,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",737,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",738,10,composite,composite,1,97,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",739,10,prime,prime,1,97,94,94,"step 6: all congruences hold",300187.6
+exhaustive,"all n",740,10,composite,composite,1,107,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",741,10,composite,composite,1,101,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",742,10,composite,composite,1,101,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",743,10,prime,prime,1,121,101,101,"step 6: all congruences hold",469962.0
+exhaustive,"all n",744,10,composite,composite,1,113,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",745,10,composite,composite,1,101,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",746,10,composite,composite,1,107,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",747,10,composite,composite,1,97,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",748,10,composite,composite,1,113,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",749,10,composite,composite,1,101,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",750,10,composite,composite,1,97,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",751,10,prime,prime,1,107,99,99,"step 6: all congruences hold",387781.2
+exhaustive,"all n",752,10,composite,composite,1,109,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",753,10,composite,composite,1,97,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",754,10,composite,composite,1,107,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",755,10,composite,composite,1,97,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",756,10,composite,composite,1,103,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",757,10,prime,prime,1,101,96,96,"step 6: all congruences hold",353633.3
+exhaustive,"all n",758,10,composite,composite,1,101,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",759,10,composite,composite,1,97,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",760,10,composite,composite,1,101,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",761,10,prime,prime,1,97,94,94,"step 6: all congruences hold",319661.1
+exhaustive,"all n",762,10,composite,composite,1,97,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",763,10,composite,composite,1,97,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",764,10,composite,composite,1,103,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",765,10,composite,composite,1,103,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",766,10,composite,composite,1,97,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",767,10,composite,composite,1,107,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",768,10,composite,composite,1,101,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",769,10,prime,prime,1,97,94,94,"step 6: all congruences hold",234697.4
+exhaustive,"all n",770,10,composite,composite,1,101,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",771,10,composite,composite,1,97,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",772,10,composite,composite,1,103,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",773,10,prime,prime,1,101,96,96,"step 6: all congruences hold",243474.0
+exhaustive,"all n",774,10,composite,composite,1,101,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",775,10,composite,composite,1,103,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",776,10,composite,composite,1,109,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",777,10,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",778,10,composite,composite,1,121,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",779,10,composite,composite,1,101,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",780,10,composite,composite,1,101,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",781,10,composite,composite,1,97,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",782,10,composite,composite,1,101,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",783,10,composite,composite,1,97,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",784,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",785,10,composite,composite,1,113,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",786,10,composite,composite,1,97,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",787,10,prime,prime,1,107,100,100,"step 6: all congruences hold",303513.0
+exhaustive,"all n",788,10,composite,composite,1,103,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",789,10,composite,composite,1,97,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",790,10,composite,composite,1,97,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",791,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",792,10,composite,composite,1,103,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",793,10,composite,composite,1,97,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",794,10,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",795,10,composite,composite,1,103,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",796,10,composite,composite,1,101,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",797,10,prime,prime,1,97,95,95,"step 6: all congruences hold",254859.7
+exhaustive,"all n",798,10,composite,composite,1,103,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",799,10,composite,composite,1,97,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",800,10,composite,composite,1,101,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",801,10,composite,composite,1,101,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",802,10,composite,composite,1,97,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",803,10,composite,composite,1,107,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",804,10,composite,composite,1,107,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",805,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",806,10,composite,composite,1,101,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",807,10,composite,composite,1,103,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",808,10,composite,composite,1,103,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",809,10,prime,prime,1,103,98,98,"step 6: all congruences hold",300430.4
+exhaustive,"all n",810,10,composite,composite,1,101,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",811,10,prime,prime,1,101,97,97,"step 6: all congruences hold",286920.2
+exhaustive,"all n",812,10,composite,composite,1,107,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",813,10,composite,composite,1,97,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",814,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",815,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",816,10,composite,composite,1,97,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",817,10,composite,composite,1,97,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",818,10,composite,composite,1,113,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",819,10,composite,composite,1,101,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",820,10,composite,composite,1,101,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",821,10,prime,prime,1,107,100,100,"step 6: all congruences hold",332183.0
+exhaustive,"all n",822,10,composite,composite,1,103,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",823,10,prime,prime,1,101,97,97,"step 6: all congruences hold",299790.8
+exhaustive,"all n",824,10,composite,composite,1,113,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",825,10,composite,composite,1,109,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",826,10,composite,composite,1,101,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",827,10,prime,prime,1,107,100,100,"step 6: all congruences hold",349948.4
+exhaustive,"all n",828,10,composite,composite,1,109,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",829,10,prime,prime,1,103,98,98,"step 6: all congruences hold",321260.2
+exhaustive,"all n",830,10,composite,composite,1,103,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",831,10,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",832,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",833,10,composite,composite,1,97,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",834,10,composite,composite,1,97,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",835,10,composite,composite,1,97,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",836,10,composite,composite,1,97,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",837,10,composite,composite,1,101,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",838,10,composite,composite,1,113,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",839,10,prime,prime,1,149,119,119,"step 6: all congruences hold",649327.2
+exhaustive,"all n",840,10,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",841,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",842,10,composite,composite,1,101,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",843,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",844,10,composite,composite,1,97,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",845,10,composite,composite,1,103,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",846,10,composite,composite,1,101,0,0,"step 3: shared factor",4.9
+exhaustive,"all n",847,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",848,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",849,10,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",850,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",851,10,composite,composite,1,137,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",852,10,composite,composite,1,97,0,0,"step 3: shared factor",5.3
+exhaustive,"all n",853,10,prime,prime,1,107,101,101,"step 6: all congruences hold",345182.6
+exhaustive,"all n",854,10,composite,composite,1,101,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",855,10,composite,composite,1,121,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",856,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",857,10,prime,prime,1,113,104,104,"step 6: all congruences hold",383025.8
+exhaustive,"all n",858,10,composite,composite,1,97,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",859,10,prime,prime,1,97,96,96,"step 6: all congruences hold",288779.1
+exhaustive,"all n",860,10,composite,composite,1,97,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",861,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",862,10,composite,composite,1,107,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",863,10,prime,prime,1,97,96,96,"step 6: all congruences hold",299750.6
+exhaustive,"all n",864,10,composite,composite,1,103,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",865,10,composite,composite,1,113,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",866,10,composite,composite,1,97,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",867,10,composite,composite,1,101,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",868,10,composite,composite,1,97,0,0,"step 3: shared factor",5.1
+exhaustive,"all n",869,10,composite,composite,1,101,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",870,10,composite,composite,1,113,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",871,10,composite,composite,1,101,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",872,10,composite,composite,1,103,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",873,10,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",874,10,composite,composite,1,101,0,0,"step 3: shared factor",5.2
+exhaustive,"all n",875,10,composite,composite,1,101,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",876,10,composite,composite,1,107,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",877,10,prime,prime,1,103,99,99,"step 6: all congruences hold",367148.1
+exhaustive,"all n",878,10,composite,composite,1,97,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",879,10,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",880,10,composite,composite,1,97,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",881,10,prime,prime,1,101,98,98,"step 6: all congruences hold",358847.6
+exhaustive,"all n",882,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",883,10,prime,prime,1,97,96,96,"step 6: all congruences hold",313719.5
+exhaustive,"all n",884,10,composite,composite,1,107,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",885,10,composite,composite,1,109,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",886,10,composite,composite,1,97,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",887,10,prime,prime,1,97,96,96,"step 6: all congruences hold",317268.4
+exhaustive,"all n",888,10,composite,composite,1,97,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",889,10,composite,composite,1,103,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",890,10,composite,composite,1,97,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",891,10,composite,composite,1,101,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",892,10,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",893,10,composite,composite,1,121,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",894,10,composite,composite,1,101,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",895,10,composite,composite,1,103,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",896,10,composite,composite,1,109,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",897,10,composite,composite,1,101,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",898,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",899,10,composite,composite,1,103,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",900,10,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",901,10,composite,composite,1,101,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",902,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",903,10,composite,composite,1,125,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",904,10,composite,composite,1,121,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",905,10,composite,composite,1,131,0,0,"step 3: shared factor",11.7
+exhaustive,"all n",906,10,composite,composite,1,101,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",907,10,prime,prime,1,101,99,99,"step 6: all congruences hold",323876.3
+exhaustive,"all n",908,10,composite,composite,1,103,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",909,10,composite,composite,1,103,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",910,10,composite,composite,1,103,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",911,10,prime,prime,1,101,99,99,"step 6: all congruences hold",317438.4
+exhaustive,"all n",912,10,composite,composite,1,101,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",913,10,composite,composite,1,125,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",914,10,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",915,10,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",916,10,composite,composite,1,101,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",917,10,composite,composite,1,101,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",918,10,composite,composite,1,127,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",919,10,prime,prime,1,107,102,102,"step 6: all congruences hold",366073.9
+exhaustive,"all n",920,10,composite,composite,1,101,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",921,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",922,10,composite,composite,1,107,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",923,10,composite,composite,1,103,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",924,10,composite,composite,1,101,0,0,"step 3: shared factor",4.6
+exhaustive,"all n",925,10,composite,composite,1,103,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",926,10,composite,composite,1,107,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",927,10,composite,composite,1,101,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",928,10,composite,composite,1,107,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",929,10,prime,prime,1,107,102,102,"step 6: all congruences hold",371440.5
+exhaustive,"all n",930,10,composite,composite,1,107,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",931,10,composite,composite,1,109,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",932,10,composite,composite,1,103,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",933,10,composite,composite,1,103,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",934,10,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",935,10,composite,composite,1,101,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",936,10,composite,composite,1,101,0,0,"step 3: shared factor",5.5
+exhaustive,"all n",937,10,prime,prime,1,101,99,99,"step 6: all congruences hold",340733.0
+exhaustive,"all n",938,10,composite,composite,1,101,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",939,10,composite,composite,1,103,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",940,10,composite,composite,1,107,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",941,10,prime,prime,1,109,103,103,"step 6: all congruences hold",402145.8
+exhaustive,"all n",942,10,composite,composite,1,109,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",943,10,composite,composite,1,101,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",944,10,composite,composite,1,101,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",945,10,composite,composite,1,127,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",946,10,composite,composite,1,127,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",947,10,prime,prime,1,101,99,99,"step 6: all congruences hold",345635.4
+exhaustive,"all n",948,10,composite,composite,1,103,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",949,10,composite,composite,1,101,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",950,10,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",951,10,composite,composite,1,101,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",952,10,composite,composite,1,107,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",953,10,prime,prime,1,107,102,102,"step 6: all congruences hold",400604.5
+exhaustive,"all n",954,10,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",955,10,composite,composite,1,101,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",956,10,composite,composite,1,127,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",957,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",958,10,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",959,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",960,10,composite,composite,1,101,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",961,10,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",962,10,composite,composite,1,101,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",963,10,composite,composite,1,109,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",964,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",965,10,composite,composite,1,107,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",966,10,composite,composite,1,139,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",967,10,prime,prime,1,103,101,101,"step 6: all congruences hold",379781.7
+exhaustive,"all n",968,10,composite,composite,1,101,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",969,10,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",970,10,composite,composite,1,101,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",971,10,prime,prime,1,103,101,101,"step 6: all congruences hold",384714.3
+exhaustive,"all n",972,10,composite,composite,1,101,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",973,10,composite,composite,1,125,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",974,10,composite,composite,1,113,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",975,10,composite,composite,1,101,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",976,10,composite,composite,1,101,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",977,10,prime,prime,1,125,100,100,"step 6: all congruences hold",528424.2
+exhaustive,"all n",978,10,composite,composite,1,103,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",979,10,composite,composite,1,113,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",980,10,composite,composite,1,103,0,0,"step 3: shared factor",5.7
+exhaustive,"all n",981,10,composite,composite,1,101,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",982,10,composite,composite,1,101,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",983,10,prime,prime,1,101,100,100,"step 6: all congruences hold",384021.4
+exhaustive,"all n",984,10,composite,composite,1,101,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",985,10,composite,composite,1,107,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",986,10,composite,composite,1,121,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",987,10,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",988,10,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",989,10,composite,composite,1,103,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",990,10,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",991,10,prime,prime,1,107,103,103,"step 6: all congruences hold",442387.7
+exhaustive,"all n",992,10,composite,composite,1,101,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",993,10,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",994,10,composite,composite,1,103,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",995,10,composite,composite,1,101,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",996,10,composite,composite,1,113,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",997,10,prime,prime,1,103,101,101,"step 6: all congruences hold",417577.6
+exhaustive,"all n",998,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",999,10,composite,composite,1,101,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1000,10,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",1001,10,composite,composite,1,103,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1002,10,composite,composite,1,101,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",1003,10,composite,composite,1,101,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1004,10,composite,composite,1,103,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1005,10,composite,composite,1,103,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",1006,10,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1007,10,composite,composite,1,101,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1008,10,composite,composite,1,101,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1009,10,prime,prime,1,107,103,103,"step 6: all congruences hold",461147.8
+exhaustive,"all n",1010,10,composite,composite,1,131,0,0,"step 3: shared factor",11.5
+exhaustive,"all n",1011,10,composite,composite,1,103,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1012,10,composite,composite,1,101,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1013,10,prime,prime,1,101,100,100,"step 6: all congruences hold",412417.4
+exhaustive,"all n",1014,10,composite,composite,1,103,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1015,10,composite,composite,1,103,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1016,10,composite,composite,1,137,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1017,10,composite,composite,1,101,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1018,10,composite,composite,1,101,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1019,10,prime,prime,1,121,105,105,"step 6: all congruences hold",591766.8
+exhaustive,"all n",1020,10,composite,composite,1,109,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1021,10,prime,prime,1,101,100,100,"step 6: all congruences hold",420542.8
+exhaustive,"all n",1022,10,composite,composite,1,101,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1023,10,composite,composite,1,103,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1024,11,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",1025,11,composite,composite,1,109,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1026,11,composite,composite,1,103,0,0,"step 3: shared factor",5.4
+exhaustive,"all n",1027,11,composite,composite,1,113,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1028,11,composite,composite,1,103,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1029,11,composite,composite,1,107,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1030,11,composite,composite,1,107,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1031,11,prime,prime,1,107,104,104,"step 6: all congruences hold",290212.6
+exhaustive,"all n",1032,11,composite,composite,1,109,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1033,11,prime,prime,1,107,104,104,"step 6: all congruences hold",289182.8
+exhaustive,"all n",1034,11,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1035,11,composite,composite,1,103,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1036,11,composite,composite,1,103,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1037,11,composite,composite,1,107,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1038,11,composite,composite,1,109,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1039,11,prime,prime,1,109,105,105,"step 6: all congruences hold",310361.0
+exhaustive,"all n",1040,11,composite,composite,1,107,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1041,11,composite,composite,1,103,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1042,11,composite,composite,1,103,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1043,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1044,11,composite,composite,1,113,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1045,11,composite,composite,1,107,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1046,11,composite,composite,1,109,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1047,11,composite,composite,1,107,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1048,11,composite,composite,1,109,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1049,11,prime,prime,1,137,118,118,"step 6: all congruences hold",504508.2
+exhaustive,"all n",1050,11,composite,composite,1,103,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1051,11,prime,prime,1,103,102,102,"step 6: all congruences hold",285192.7
+exhaustive,"all n",1052,11,composite,composite,1,121,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1053,11,composite,composite,1,109,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1054,11,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1055,11,composite,composite,1,113,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1056,11,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1057,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1058,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1059,11,composite,composite,1,107,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1060,11,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1061,11,prime,prime,1,107,104,104,"step 6: all congruences hold",316944.0
+exhaustive,"all n",1062,11,composite,composite,1,113,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1063,11,prime,prime,1,113,107,107,"step 6: all congruences hold",353622.9
+exhaustive,"all n",1064,11,composite,composite,1,113,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1065,11,composite,composite,1,103,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1066,11,composite,composite,1,107,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1067,11,composite,composite,1,107,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1068,11,composite,composite,1,169,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1069,11,prime,prime,1,121,106,106,"step 6: all congruences hold",400243.2
+exhaustive,"all n",1070,11,composite,composite,1,103,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1071,11,composite,composite,1,113,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1072,11,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1073,11,composite,composite,1,103,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1074,11,composite,composite,1,103,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1075,11,composite,composite,1,103,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1076,11,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1077,11,composite,composite,1,107,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1078,11,composite,composite,1,103,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1079,11,composite,composite,1,109,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1080,11,composite,composite,1,109,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",1081,11,composite,composite,1,103,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1082,11,composite,composite,1,139,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1083,11,composite,composite,1,103,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1084,11,composite,composite,1,103,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1085,11,composite,composite,1,107,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1086,11,composite,composite,1,149,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1087,11,prime,prime,1,107,104,104,"step 6: all congruences hold",347044.0
+exhaustive,"all n",1088,11,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1089,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1090,11,composite,composite,1,107,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1091,11,prime,prime,1,107,104,104,"step 6: all congruences hold",338247.3
+exhaustive,"all n",1092,11,composite,composite,1,103,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1093,11,prime,prime,1,113,107,107,"step 6: all congruences hold",383545.1
+exhaustive,"all n",1094,11,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1095,11,composite,composite,1,103,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1096,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1097,11,prime,prime,1,103,102,102,"step 6: all congruences hold",320339.4
+exhaustive,"all n",1098,11,composite,composite,1,107,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1099,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1100,11,composite,composite,1,109,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1101,11,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1102,11,composite,composite,1,107,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1103,11,prime,prime,1,109,106,106,"step 6: all congruences hold",372005.0
+exhaustive,"all n",1104,11,composite,composite,1,109,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1105,11,composite,composite,1,131,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1106,11,composite,composite,1,113,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1107,11,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1108,11,composite,composite,1,107,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1109,11,prime,prime,1,113,108,108,"step 6: all congruences hold",403989.2
+exhaustive,"all n",1110,11,composite,composite,1,113,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1111,11,composite,composite,1,113,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1112,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1113,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1114,11,composite,composite,1,109,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1115,11,composite,composite,1,107,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1116,11,composite,composite,1,107,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1117,11,prime,prime,1,121,107,107,"step 6: all congruences hold",458351.0
+exhaustive,"all n",1118,11,composite,composite,1,113,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1119,11,composite,composite,1,121,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1120,11,composite,composite,1,107,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",1121,11,composite,composite,1,107,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1122,11,composite,composite,1,127,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1123,11,prime,prime,1,137,119,119,"step 6: all congruences hold",607665.7
+exhaustive,"all n",1124,11,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1125,11,composite,composite,1,107,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1126,11,composite,composite,1,127,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1127,11,composite,composite,1,109,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1128,11,composite,composite,1,107,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",1129,11,prime,prime,1,107,105,105,"step 6: all congruences hold",392718.7
+exhaustive,"all n",1130,11,composite,composite,1,107,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1131,11,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1132,11,composite,composite,1,109,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1133,11,composite,composite,1,107,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1134,11,composite,composite,1,109,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1135,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1136,11,composite,composite,1,107,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1137,11,composite,composite,1,107,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1138,11,composite,composite,1,107,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1139,11,composite,composite,1,121,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1140,11,composite,composite,1,107,0,0,"step 3: shared factor",5.6
+exhaustive,"all n",1141,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1142,11,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1143,11,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1144,11,composite,composite,1,107,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1145,11,composite,composite,1,131,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1146,11,composite,composite,1,109,0,0,"step 3: shared factor",6.2
+exhaustive,"all n",1147,11,composite,composite,1,107,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1148,11,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1149,11,composite,composite,1,109,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1150,11,composite,composite,1,107,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1151,11,prime,prime,1,113,108,108,"step 6: all congruences hold",463672.8
+exhaustive,"all n",1152,11,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1153,11,prime,prime,1,113,108,108,"step 6: all congruences hold",419824.9
+exhaustive,"all n",1154,11,composite,composite,1,107,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1155,11,composite,composite,1,109,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1156,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1157,11,composite,composite,1,109,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1158,11,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1159,11,composite,composite,1,109,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1160,11,composite,composite,1,109,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1161,11,composite,composite,1,107,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1162,11,composite,composite,1,109,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1163,11,prime,prime,1,107,105,105,"step 6: all congruences hold",380188.7
+exhaustive,"all n",1164,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1165,11,composite,composite,1,107,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1166,11,composite,composite,1,107,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1167,11,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1168,11,composite,composite,1,107,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1169,11,composite,composite,1,109,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1170,11,composite,composite,1,131,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1171,11,prime,prime,1,137,119,119,"step 6: all congruences hold",652818.7
+exhaustive,"all n",1172,11,composite,composite,1,121,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1173,11,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1174,11,composite,composite,1,107,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1175,11,composite,composite,1,109,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1176,11,composite,composite,1,113,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",1177,11,composite,composite,1,113,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1178,11,composite,composite,1,137,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1179,11,composite,composite,1,107,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1180,11,composite,composite,1,137,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1181,11,prime,prime,1,109,107,107,"step 6: all congruences hold",419246.5
+exhaustive,"all n",1182,11,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1183,11,composite,composite,1,107,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1184,11,composite,composite,1,107,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1185,11,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1186,11,composite,composite,1,109,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1187,11,prime,prime,1,131,117,117,"step 6: all congruences hold",618952.3
+exhaustive,"all n",1188,11,composite,composite,1,109,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1189,11,composite,composite,1,109,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1190,11,composite,composite,1,121,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1191,11,composite,composite,1,127,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1192,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1193,11,prime,prime,1,109,107,107,"step 6: all congruences hold",424818.3
+exhaustive,"all n",1194,11,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1195,11,composite,composite,1,107,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1196,11,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1197,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1198,11,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1199,11,composite,composite,1,107,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1200,11,composite,composite,1,113,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1201,11,prime,prime,1,107,106,106,"step 6: all congruences hold",417085.1
+exhaustive,"all n",1202,11,composite,composite,1,131,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1203,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1204,11,composite,composite,1,113,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1205,11,composite,composite,1,107,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1206,11,composite,composite,1,113,0,0,"step 3: shared factor",5.8
+exhaustive,"all n",1207,11,composite,composite,1,137,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1208,11,composite,composite,1,107,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1209,11,composite,composite,1,107,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1210,11,composite,composite,1,109,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1211,11,composite,composite,1,163,0,0,"step 3: shared factor",12.7
+exhaustive,"all n",1212,11,composite,composite,1,109,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",1213,11,prime,prime,1,109,107,107,"step 6: all congruences hold",453515.8
+exhaustive,"all n",1214,11,composite,composite,1,113,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1215,11,composite,composite,1,107,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1216,11,composite,composite,1,113,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1217,11,prime,prime,1,109,107,107,"step 6: all congruences hold",448279.4
+exhaustive,"all n",1218,11,composite,composite,1,121,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1219,11,composite,composite,1,113,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1220,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1221,11,composite,composite,1,127,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1222,11,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1223,11,prime,prime,1,107,106,106,"step 6: all congruences hold",434451.6
+exhaustive,"all n",1224,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1225,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1226,11,composite,composite,1,113,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1227,11,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1228,11,composite,composite,1,107,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1229,11,prime,prime,1,109,107,107,"step 6: all congruences hold",459980.2
+exhaustive,"all n",1230,11,composite,composite,1,137,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1231,11,prime,prime,1,107,106,106,"step 6: all congruences hold",447969.9
+exhaustive,"all n",1232,11,composite,composite,1,107,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1233,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1234,11,composite,composite,1,121,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1235,11,composite,composite,1,107,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1236,11,composite,composite,1,107,0,0,"step 3: shared factor",6.0
+exhaustive,"all n",1237,11,prime,prime,1,107,106,106,"step 6: all congruences hold",455513.6
+exhaustive,"all n",1238,11,composite,composite,1,109,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1239,11,composite,composite,1,109,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1240,11,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1241,11,composite,composite,1,109,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1242,11,composite,composite,1,107,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",1243,11,composite,composite,1,107,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1244,11,composite,composite,1,107,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1245,11,composite,composite,1,107,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1246,11,composite,composite,1,109,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1247,11,composite,composite,1,107,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1248,11,composite,composite,1,107,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",1249,11,prime,prime,1,107,106,106,"step 6: all congruences hold",466909.5
+exhaustive,"all n",1250,11,composite,composite,1,107,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1251,11,composite,composite,1,107,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1252,11,composite,composite,1,109,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1253,11,composite,composite,1,113,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1254,11,composite,composite,1,107,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1255,11,composite,composite,1,107,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1256,11,composite,composite,1,109,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1257,11,composite,composite,1,109,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1258,11,composite,composite,1,109,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1259,11,prime,prime,1,127,116,116,"step 6: all congruences hold",689938.1
+exhaustive,"all n",1260,11,composite,composite,1,113,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1261,11,composite,composite,1,109,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1262,11,composite,composite,1,113,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1263,11,composite,composite,1,113,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1264,11,composite,composite,1,109,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1265,11,composite,composite,1,163,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1266,11,composite,composite,1,109,0,0,"step 3: shared factor",6.1
+exhaustive,"all n",1267,11,composite,composite,1,113,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1268,11,composite,composite,1,109,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1269,11,composite,composite,1,109,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1270,11,composite,composite,1,113,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1271,11,composite,composite,1,109,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1272,11,composite,composite,1,113,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1273,11,composite,composite,1,121,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1274,11,composite,composite,1,131,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1275,11,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1276,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1277,11,prime,prime,1,113,110,110,"step 6: all congruences hold",569619.8
+exhaustive,"all n",1278,11,composite,composite,1,109,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1279,11,prime,prime,1,137,121,121,"step 6: all congruences hold",832673.6
+exhaustive,"all n",1280,11,composite,composite,1,113,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1281,11,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1282,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1283,11,prime,prime,1,121,109,109,"step 6: all congruences hold",484642.8
+exhaustive,"all n",1284,11,composite,composite,1,109,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1285,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1286,11,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1287,11,composite,composite,1,137,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1288,11,composite,composite,1,113,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1289,11,prime,prime,1,113,110,110,"step 6: all congruences hold",440331.7
+exhaustive,"all n",1290,11,composite,composite,1,109,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1291,11,prime,prime,1,137,121,121,"step 6: all congruences hold",661839.7
+exhaustive,"all n",1292,11,composite,composite,1,167,0,0,"step 3: shared factor",12.3
+exhaustive,"all n",1293,11,composite,composite,1,121,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1294,11,composite,composite,1,109,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1295,11,composite,composite,1,109,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1296,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1297,11,prime,prime,1,109,108,108,"step 6: all congruences hold",415953.5
+exhaustive,"all n",1298,11,composite,composite,1,109,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1299,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1300,11,composite,composite,1,121,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1301,11,prime,prime,1,113,110,110,"step 6: all congruences hold",448296.5
+exhaustive,"all n",1302,11,composite,composite,1,109,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1303,11,prime,prime,1,131,118,118,"step 6: all congruences hold",626254.2
+exhaustive,"all n",1304,11,composite,composite,1,137,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1305,11,composite,composite,1,121,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1306,11,composite,composite,1,121,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1307,11,prime,prime,1,131,119,119,"step 6: all congruences hold",639881.5
+exhaustive,"all n",1308,11,composite,composite,1,137,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1309,11,composite,composite,1,113,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1310,11,composite,composite,1,113,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1311,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1312,11,composite,composite,1,131,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1313,11,composite,composite,1,113,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1314,11,composite,composite,1,109,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1315,11,composite,composite,1,121,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1316,11,composite,composite,1,121,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1317,11,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1318,11,composite,composite,1,109,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1319,11,prime,prime,1,109,108,108,"step 6: all congruences hold",437407.3
+exhaustive,"all n",1320,11,composite,composite,1,131,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1321,11,prime,prime,1,109,108,108,"step 6: all congruences hold",441387.9
+exhaustive,"all n",1322,11,composite,composite,1,109,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1323,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1324,11,composite,composite,1,131,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1325,11,composite,composite,1,127,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1326,11,composite,composite,1,109,0,0,"step 3: shared factor",5.9
+exhaustive,"all n",1327,11,prime,prime,1,113,110,110,"step 6: all congruences hold",482714.2
+exhaustive,"all n",1328,11,composite,composite,1,127,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1329,11,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1330,11,composite,composite,1,137,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1331,11,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",1332,11,composite,composite,1,109,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1333,11,composite,composite,1,113,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1334,11,composite,composite,1,151,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1335,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1336,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1337,11,composite,composite,1,113,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1338,11,composite,composite,1,109,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1339,11,composite,composite,1,113,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1340,11,composite,composite,1,131,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1341,11,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1342,11,composite,composite,1,151,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1343,11,composite,composite,1,137,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1344,11,composite,composite,1,113,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1345,11,composite,composite,1,169,0,0,"step 3: shared factor",14.9
+exhaustive,"all n",1346,11,composite,composite,1,113,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1347,11,composite,composite,1,131,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1348,11,composite,composite,1,121,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1349,11,composite,composite,1,121,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1350,11,composite,composite,1,113,0,0,"step 3: shared factor",6.6
+exhaustive,"all n",1351,11,composite,composite,1,113,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1352,11,composite,composite,1,139,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1353,11,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1354,11,composite,composite,1,149,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1355,11,composite,composite,1,121,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1356,11,composite,composite,1,127,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1357,11,composite,composite,1,137,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1358,11,composite,composite,1,137,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1359,11,composite,composite,1,113,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1360,11,composite,composite,1,121,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1361,11,prime,prime,1,113,111,111,"step 6: all congruences hold",521149.3
+exhaustive,"all n",1362,11,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1363,11,composite,composite,1,127,0,0,"step 3: shared factor",11.3
+exhaustive,"all n",1364,11,composite,composite,1,131,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1365,11,composite,composite,1,137,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1366,11,composite,composite,1,113,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1367,11,prime,prime,1,127,117,117,"step 6: all congruences hold",676815.2
+exhaustive,"all n",1368,11,composite,composite,1,113,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1369,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1370,11,composite,composite,1,121,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1371,11,composite,composite,1,127,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1372,11,composite,composite,1,121,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1373,11,prime,prime,1,113,111,111,"step 6: all congruences hold",543155.9
+exhaustive,"all n",1374,11,composite,composite,1,139,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1375,11,composite,composite,1,113,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1376,11,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1377,11,composite,composite,1,113,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1378,11,composite,composite,1,211,0,0,"step 3: shared factor",20.8
+exhaustive,"all n",1379,11,composite,composite,1,113,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1380,11,composite,composite,1,113,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1381,11,prime,prime,1,121,110,110,"step 6: all congruences hold",607751.1
+exhaustive,"all n",1382,11,composite,composite,1,121,0,0,"step 3: shared factor",10.1
+exhaustive,"all n",1383,11,composite,composite,1,113,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1384,11,composite,composite,1,127,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1385,11,composite,composite,1,113,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1386,11,composite,composite,1,127,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1387,11,composite,composite,1,157,0,0,"step 3: shared factor",13.3
+exhaustive,"all n",1388,11,composite,composite,1,121,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1389,11,composite,composite,1,113,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1390,11,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1391,11,composite,composite,1,137,0,0,"step 3: shared factor",11.5
+exhaustive,"all n",1392,11,composite,composite,1,121,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1393,11,composite,composite,1,113,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1394,11,composite,composite,1,113,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1395,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1396,11,composite,composite,1,137,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1397,11,composite,composite,1,131,0,0,"step 3: shared factor",11.6
+exhaustive,"all n",1398,11,composite,composite,1,131,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1399,11,prime,prime,1,113,111,111,"step 6: all congruences hold",576646.5
+exhaustive,"all n",1400,11,composite,composite,1,127,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1401,11,composite,composite,1,113,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1402,11,composite,composite,1,113,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1403,11,composite,composite,1,113,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1404,11,composite,composite,1,121,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1405,11,composite,composite,1,121,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1406,11,composite,composite,1,131,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1407,11,composite,composite,1,131,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1408,11,composite,composite,1,131,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1409,11,prime,prime,1,127,118,118,"step 6: all congruences hold",709359.6
+exhaustive,"all n",1410,11,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1411,11,composite,composite,1,113,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1412,11,composite,composite,1,137,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1413,11,composite,composite,1,131,0,0,"step 3: shared factor",10.1
+exhaustive,"all n",1414,11,composite,composite,1,113,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1415,11,composite,composite,1,113,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1416,11,composite,composite,1,121,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1417,11,composite,composite,1,137,0,0,"step 3: shared factor",11.9
+exhaustive,"all n",1418,11,composite,composite,1,137,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1419,11,composite,composite,1,149,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1420,11,composite,composite,1,127,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1421,11,composite,composite,1,121,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1422,11,composite,composite,1,113,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1423,11,prime,prime,1,113,111,111,"step 6: all congruences hold",554582.9
+exhaustive,"all n",1424,11,composite,composite,1,113,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1425,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1426,11,composite,composite,1,113,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1427,11,prime,prime,1,121,110,110,"step 6: all congruences hold",624057.1
+exhaustive,"all n",1428,11,composite,composite,1,131,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1429,11,prime,prime,1,131,120,120,"step 6: all congruences hold",799903.0
+exhaustive,"all n",1430,11,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1431,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1432,11,composite,composite,1,113,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1433,11,prime,prime,1,149,128,128,"step 6: all congruences hold",1117808.1
+exhaustive,"all n",1434,11,composite,composite,1,131,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1435,11,composite,composite,1,113,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1436,11,composite,composite,1,113,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1437,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1438,11,composite,composite,1,131,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1439,11,prime,prime,1,149,128,128,"step 6: all congruences hold",1047564.9
+exhaustive,"all n",1440,11,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1441,11,composite,composite,1,137,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1442,11,composite,composite,1,113,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1443,11,composite,composite,1,127,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1444,11,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",1445,11,composite,composite,1,113,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1446,11,composite,composite,1,113,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1447,11,prime,prime,1,131,120,120,"step 6: all congruences hold",816173.9
+exhaustive,"all n",1448,11,composite,composite,1,113,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1449,11,composite,composite,1,113,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1450,11,composite,composite,1,113,0,0,"step 3: shared factor",6.8
+exhaustive,"all n",1451,11,prime,prime,1,131,120,120,"step 6: all congruences hold",837596.8
+exhaustive,"all n",1452,11,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1453,11,prime,prime,1,127,118,118,"step 6: all congruences hold",804052.2
+exhaustive,"all n",1454,11,composite,composite,1,127,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1455,11,composite,composite,1,127,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1456,11,composite,composite,1,137,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1457,11,composite,composite,1,113,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1458,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1459,11,prime,prime,1,113,112,112,"step 6: all congruences hold",623503.9
+exhaustive,"all n",1460,11,composite,composite,1,137,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1461,11,composite,composite,1,137,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1462,11,composite,composite,1,127,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1463,11,composite,composite,1,113,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1464,11,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1465,11,composite,composite,1,137,0,0,"step 3: shared factor",11.3
+exhaustive,"all n",1466,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1467,11,composite,composite,1,131,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1468,11,composite,composite,1,151,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1469,11,composite,composite,1,149,0,0,"step 3: shared factor",13.0
+exhaustive,"all n",1470,11,composite,composite,1,131,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1471,11,prime,prime,1,131,120,120,"step 6: all congruences hold",886770.5
+exhaustive,"all n",1472,11,composite,composite,1,113,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1473,11,composite,composite,1,151,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1474,11,composite,composite,1,113,0,0,"step 3: shared factor",6.5
+exhaustive,"all n",1475,11,composite,composite,1,113,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1476,11,composite,composite,1,137,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1477,11,composite,composite,1,149,0,0,"step 3: shared factor",11.8
+exhaustive,"all n",1478,11,composite,composite,1,131,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1479,11,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1480,11,composite,composite,1,127,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1481,11,prime,prime,1,113,112,112,"step 6: all congruences hold",625734.5
+exhaustive,"all n",1482,11,composite,composite,1,127,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1483,11,prime,prime,1,127,119,119,"step 6: all congruences hold",811004.5
+exhaustive,"all n",1484,11,composite,composite,1,137,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1485,11,composite,composite,1,151,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1486,11,composite,composite,1,113,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1487,11,prime,prime,1,137,123,123,"step 6: all congruences hold",966596.8
+exhaustive,"all n",1488,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1489,11,prime,prime,1,113,112,112,"step 6: all congruences hold",637112.5
+exhaustive,"all n",1490,11,composite,composite,1,113,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1491,11,composite,composite,1,131,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1492,11,composite,composite,1,113,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1493,11,prime,prime,1,113,112,112,"step 6: all congruences hold",634860.2
+exhaustive,"all n",1494,11,composite,composite,1,127,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1495,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1496,11,composite,composite,1,113,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1497,11,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1498,11,composite,composite,1,113,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1499,11,prime,prime,1,139,124,124,"step 6: all congruences hold",1012687.9
+exhaustive,"all n",1500,11,composite,composite,1,139,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1501,11,composite,composite,1,137,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1502,11,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1503,11,composite,composite,1,113,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1504,11,composite,composite,1,137,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1505,11,composite,composite,1,139,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1506,11,composite,composite,1,113,0,0,"step 3: shared factor",6.4
+exhaustive,"all n",1507,11,composite,composite,1,113,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1508,11,composite,composite,1,113,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1509,11,composite,composite,1,127,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1510,11,composite,composite,1,137,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1511,11,prime,prime,1,127,119,119,"step 6: all congruences hold",968709.6
+exhaustive,"all n",1512,11,composite,composite,1,113,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1513,11,composite,composite,1,127,0,0,"step 3: shared factor",11.5
+exhaustive,"all n",1514,11,composite,composite,1,113,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1515,11,composite,composite,1,113,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1516,11,composite,composite,1,113,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1517,11,composite,composite,1,131,0,0,"step 3: shared factor",11.6
+exhaustive,"all n",1518,11,composite,composite,1,139,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1519,11,composite,composite,1,137,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1520,11,composite,composite,1,137,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1521,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1522,11,composite,composite,1,139,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1523,11,prime,prime,1,113,112,112,"step 6: all congruences hold",770283.2
+exhaustive,"all n",1524,11,composite,composite,1,113,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1525,11,composite,composite,1,139,0,0,"step 3: shared factor",10.1
+exhaustive,"all n",1526,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1527,11,composite,composite,1,113,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1528,11,composite,composite,1,113,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1529,11,composite,composite,1,131,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1530,11,composite,composite,1,127,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1531,11,prime,prime,1,127,119,119,"step 6: all congruences hold",981324.4
+exhaustive,"all n",1532,11,composite,composite,1,139,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1533,11,composite,composite,1,137,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1534,11,composite,composite,1,131,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1535,11,composite,composite,1,163,0,0,"step 3: shared factor",14.8
+exhaustive,"all n",1536,11,composite,composite,1,127,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1537,11,composite,composite,1,131,0,0,"step 3: shared factor",11.7
+exhaustive,"all n",1538,11,composite,composite,1,127,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1539,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1540,11,composite,composite,1,137,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1541,11,composite,composite,1,139,0,0,"step 3: shared factor",11.6
+exhaustive,"all n",1542,11,composite,composite,1,137,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1543,11,prime,prime,1,163,135,135,"step 6: all congruences hold",1068672.6
+exhaustive,"all n",1544,11,composite,composite,1,131,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1545,11,composite,composite,1,131,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1546,11,composite,composite,1,139,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1547,11,composite,composite,1,127,0,0,"step 3: shared factor",10.1
+exhaustive,"all n",1548,11,composite,composite,1,139,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1549,11,prime,prime,1,137,124,124,"step 6: all congruences hold",788364.7
+exhaustive,"all n",1550,11,composite,composite,1,137,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1551,11,composite,composite,1,131,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1552,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1553,11,prime,prime,1,127,119,119,"step 6: all congruences hold",667022.3
+exhaustive,"all n",1554,11,composite,composite,1,137,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1555,11,composite,composite,1,137,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1556,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1557,11,composite,composite,1,131,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1558,11,composite,composite,1,137,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1559,11,prime,prime,1,131,121,121,"step 6: all congruences hold",720591.4
+exhaustive,"all n",1560,11,composite,composite,1,131,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1561,11,composite,composite,1,131,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1562,11,composite,composite,1,137,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1563,11,composite,composite,1,127,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1564,11,composite,composite,1,137,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1565,11,composite,composite,1,131,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1566,11,composite,composite,1,151,0,0,"step 3: shared factor",15.7
+exhaustive,"all n",1567,11,prime,prime,1,127,120,120,"step 6: all congruences hold",695618.4
+exhaustive,"all n",1568,11,composite,composite,1,131,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1569,11,composite,composite,1,127,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1570,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1571,11,prime,prime,1,151,131,131,"step 6: all congruences hold",965446.9
+exhaustive,"all n",1572,11,composite,composite,1,127,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1573,11,composite,composite,1,137,0,0,"step 3: shared factor",12.3
+exhaustive,"all n",1574,11,composite,composite,1,131,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1575,11,composite,composite,1,157,0,0,"step 3: shared factor",10.9
+exhaustive,"all n",1576,11,composite,composite,1,157,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1577,11,composite,composite,1,127,0,0,"step 3: shared factor",11.2
+exhaustive,"all n",1578,11,composite,composite,1,131,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1579,11,prime,prime,1,127,120,120,"step 6: all congruences hold",697653.7
+exhaustive,"all n",1580,11,composite,composite,1,127,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1581,11,composite,composite,1,127,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1582,11,composite,composite,1,127,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1583,11,prime,prime,1,149,130,130,"step 6: all congruences hold",942345.7
+exhaustive,"all n",1584,11,composite,composite,1,149,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1585,11,composite,composite,1,139,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1586,11,composite,composite,1,131,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1587,11,composite,composite,1,137,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1588,11,composite,composite,1,149,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1589,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1590,11,composite,composite,1,137,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1591,11,composite,composite,1,127,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1592,11,composite,composite,1,137,0,0,"step 3: shared factor",10.1
+exhaustive,"all n",1593,11,composite,composite,1,137,0,0,"step 3: shared factor",11.2
+exhaustive,"all n",1594,11,composite,composite,1,131,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1595,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1596,11,composite,composite,1,137,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1597,11,prime,prime,1,137,125,125,"step 6: all congruences hold",793481.7
+exhaustive,"all n",1598,11,composite,composite,1,131,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1599,11,composite,composite,1,137,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1600,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1601,11,prime,prime,1,131,122,122,"step 6: all congruences hold",722185.9
+exhaustive,"all n",1602,11,composite,composite,1,127,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1603,11,composite,composite,1,131,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1604,11,composite,composite,1,137,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1605,11,composite,composite,1,149,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1606,11,composite,composite,1,151,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1607,11,prime,prime,1,127,120,120,"step 6: all congruences hold",694273.2
+exhaustive,"all n",1608,11,composite,composite,1,157,0,0,"step 3: shared factor",11.4
+exhaustive,"all n",1609,11,prime,prime,1,127,120,120,"step 6: all congruences hold",718832.6
+exhaustive,"all n",1610,11,composite,composite,1,127,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1611,11,composite,composite,1,137,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1612,11,composite,composite,1,131,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1613,11,prime,prime,1,137,125,125,"step 6: all congruences hold",834561.2
+exhaustive,"all n",1614,11,composite,composite,1,139,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1615,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1616,11,composite,composite,1,127,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1617,11,composite,composite,1,127,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1618,11,composite,composite,1,137,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1619,11,prime,prime,1,139,126,126,"step 6: all congruences hold",852212.7
+exhaustive,"all n",1620,11,composite,composite,1,127,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1621,11,prime,prime,1,127,120,120,"step 6: all congruences hold",715901.5
+exhaustive,"all n",1622,11,composite,composite,1,131,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1623,11,composite,composite,1,137,0,0,"step 3: shared factor",11.2
+exhaustive,"all n",1624,11,composite,composite,1,137,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1625,11,composite,composite,1,127,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1626,11,composite,composite,1,131,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1627,11,prime,prime,1,139,126,126,"step 6: all congruences hold",850373.5
+exhaustive,"all n",1628,11,composite,composite,1,131,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1629,11,composite,composite,1,131,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1630,11,composite,composite,1,127,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1631,11,composite,composite,1,137,0,0,"step 3: shared factor",11.2
+exhaustive,"all n",1632,11,composite,composite,1,137,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1633,11,composite,composite,1,127,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1634,11,composite,composite,1,127,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1635,11,composite,composite,1,179,0,0,"step 3: shared factor",12.8
+exhaustive,"all n",1636,11,composite,composite,1,127,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1637,11,prime,prime,1,139,126,126,"step 6: all congruences hold",880691.6
+exhaustive,"all n",1638,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1639,11,composite,composite,1,131,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1640,11,composite,composite,1,127,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1641,11,composite,composite,1,137,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1642,11,composite,composite,1,127,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1643,11,composite,composite,1,139,0,0,"step 3: shared factor",13.0
+exhaustive,"all n",1644,11,composite,composite,1,131,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1645,11,composite,composite,1,167,0,0,"step 3: shared factor",12.6
+exhaustive,"all n",1646,11,composite,composite,1,167,0,0,"step 3: shared factor",11.5
+exhaustive,"all n",1647,11,composite,composite,1,137,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1648,11,composite,composite,1,131,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1649,11,composite,composite,1,137,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1650,11,composite,composite,1,137,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1651,11,composite,composite,1,149,0,0,"step 3: shared factor",11.5
+exhaustive,"all n",1652,11,composite,composite,1,139,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1653,11,composite,composite,1,149,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1654,11,composite,composite,1,127,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1655,11,composite,composite,1,131,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1656,11,composite,composite,1,137,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1657,11,prime,prime,1,127,121,121,"step 6: all congruences hold",782811.0
+exhaustive,"all n",1658,11,composite,composite,1,127,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1659,11,composite,composite,1,131,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1660,11,composite,composite,1,131,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1661,11,composite,composite,1,139,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1662,11,composite,composite,1,131,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1663,11,prime,prime,1,127,121,121,"step 6: all congruences hold",814785.5
+exhaustive,"all n",1664,11,composite,composite,1,137,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1665,11,composite,composite,1,127,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1666,11,composite,composite,1,149,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1667,11,prime,prime,1,131,123,123,"step 6: all congruences hold",812437.3
+exhaustive,"all n",1668,11,composite,composite,1,131,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1669,11,prime,prime,1,131,123,123,"step 6: all congruences hold",897338.7
+exhaustive,"all n",1670,11,composite,composite,1,131,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1671,11,composite,composite,1,137,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1672,11,composite,composite,1,157,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1673,11,composite,composite,1,137,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1674,11,composite,composite,1,127,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1675,11,composite,composite,1,131,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1676,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1677,11,composite,composite,1,137,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1678,11,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1679,11,composite,composite,1,137,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1680,11,composite,composite,1,127,0,0,"step 3: shared factor",6.3
+exhaustive,"all n",1681,11,composite,composite,1,0,0,0,"step 1: perfect power",0.1
+exhaustive,"all n",1682,11,composite,composite,1,131,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1683,11,composite,composite,1,131,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1684,11,composite,composite,1,137,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1685,11,composite,composite,1,139,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1686,11,composite,composite,1,137,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1687,11,composite,composite,1,131,0,0,"step 3: shared factor",11.7
+exhaustive,"all n",1688,11,composite,composite,1,131,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1689,11,composite,composite,1,137,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1690,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1691,11,composite,composite,1,131,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1692,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1693,11,prime,prime,1,157,134,134,"step 6: all congruences hold",1309009.7
+exhaustive,"all n",1694,11,composite,composite,1,127,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1695,11,composite,composite,1,137,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1696,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1697,11,prime,prime,1,127,121,121,"step 6: all congruences hold",887979.7
+exhaustive,"all n",1698,11,composite,composite,1,131,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1699,11,prime,prime,1,127,121,121,"step 6: all congruences hold",878736.1
+exhaustive,"all n",1700,11,composite,composite,1,131,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1701,11,composite,composite,1,137,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1702,11,composite,composite,1,137,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1703,11,composite,composite,1,157,0,0,"step 3: shared factor",13.2
+exhaustive,"all n",1704,11,composite,composite,1,127,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1705,11,composite,composite,1,131,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1706,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1707,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1708,11,composite,composite,1,127,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1709,11,prime,prime,1,127,121,121,"step 6: all congruences hold",870184.3
+exhaustive,"all n",1710,11,composite,composite,1,137,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1711,11,composite,composite,1,131,0,0,"step 3: shared factor",10.1
+exhaustive,"all n",1712,11,composite,composite,1,151,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1713,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1714,11,composite,composite,1,137,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1715,11,composite,composite,1,137,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1716,11,composite,composite,1,127,0,0,"step 3: shared factor",6.7
+exhaustive,"all n",1717,11,composite,composite,1,131,0,0,"step 3: shared factor",10.9
+exhaustive,"all n",1718,11,composite,composite,1,127,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1719,11,composite,composite,1,137,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1720,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1721,11,prime,prime,1,139,127,127,"step 6: all congruences hold",1074714.8
+exhaustive,"all n",1722,11,composite,composite,1,149,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1723,11,prime,prime,1,137,126,126,"step 6: all congruences hold",1040403.6
+exhaustive,"all n",1724,11,composite,composite,1,137,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1725,11,composite,composite,1,131,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1726,11,composite,composite,1,131,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1727,11,composite,composite,1,137,0,0,"step 3: shared factor",11.4
+exhaustive,"all n",1728,11,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+exhaustive,"all n",1729,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1730,11,composite,composite,1,137,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1731,11,composite,composite,1,149,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1732,11,composite,composite,1,131,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1733,11,prime,prime,1,131,123,123,"step 6: all congruences hold",955481.8
+exhaustive,"all n",1734,11,composite,composite,1,127,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1735,11,composite,composite,1,137,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1736,11,composite,composite,1,127,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1737,11,composite,composite,1,127,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1738,11,composite,composite,1,137,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1739,11,composite,composite,1,137,0,0,"step 3: shared factor",12.5
+exhaustive,"all n",1740,11,composite,composite,1,131,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1741,11,prime,prime,1,137,126,126,"step 6: all congruences hold",1074610.0
+exhaustive,"all n",1742,11,composite,composite,1,127,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1743,11,composite,composite,1,127,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1744,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1745,11,composite,composite,1,149,0,0,"step 3: shared factor",11.2
+exhaustive,"all n",1746,11,composite,composite,1,137,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1747,11,prime,prime,1,127,121,121,"step 6: all congruences hold",903724.5
+exhaustive,"all n",1748,11,composite,composite,1,127,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1749,11,composite,composite,1,167,0,0,"step 3: shared factor",12.0
+exhaustive,"all n",1750,11,composite,composite,1,137,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1751,11,composite,composite,1,157,0,0,"step 3: shared factor",13.8
+exhaustive,"all n",1752,11,composite,composite,1,127,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1753,11,prime,prime,1,131,123,123,"step 6: all congruences hold",923824.4
+exhaustive,"all n",1754,11,composite,composite,1,137,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1755,11,composite,composite,1,137,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1756,11,composite,composite,1,139,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1757,11,composite,composite,1,127,0,0,"step 3: shared factor",11.9
+exhaustive,"all n",1758,11,composite,composite,1,137,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1759,11,prime,prime,1,131,123,123,"step 6: all congruences hold",947485.6
+exhaustive,"all n",1760,11,composite,composite,1,127,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1761,11,composite,composite,1,127,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1762,11,composite,composite,1,167,0,0,"step 3: shared factor",12.3
+exhaustive,"all n",1763,11,composite,composite,1,127,0,0,"step 3: shared factor",12.3
+exhaustive,"all n",1764,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1765,11,composite,composite,1,127,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1766,11,composite,composite,1,139,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1767,11,composite,composite,1,127,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1768,11,composite,composite,1,137,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1769,11,composite,composite,1,127,0,0,"step 3: shared factor",10.9
+exhaustive,"all n",1770,11,composite,composite,1,131,0,0,"step 3: shared factor",6.9
+exhaustive,"all n",1771,11,composite,composite,1,167,0,0,"step 3: shared factor",13.0
+exhaustive,"all n",1772,11,composite,composite,1,139,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1773,11,composite,composite,1,149,0,0,"step 3: shared factor",11.3
+exhaustive,"all n",1774,11,composite,composite,1,149,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1775,11,composite,composite,1,131,0,0,"step 3: shared factor",10.9
+exhaustive,"all n",1776,11,composite,composite,1,137,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1777,11,prime,prime,1,139,127,127,"step 6: all congruences hold",1125989.7
+exhaustive,"all n",1778,11,composite,composite,1,137,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1779,11,composite,composite,1,131,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1780,11,composite,composite,1,149,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1781,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1782,11,composite,composite,1,139,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1783,11,prime,prime,1,139,127,127,"step 6: all congruences hold",1090061.5
+exhaustive,"all n",1784,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1785,11,composite,composite,1,127,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1786,11,composite,composite,1,131,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1787,11,prime,prime,1,137,126,126,"step 6: all congruences hold",1088748.2
+exhaustive,"all n",1788,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1789,11,prime,prime,1,157,135,135,"step 6: all congruences hold",1368534.4
+exhaustive,"all n",1790,11,composite,composite,1,127,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1791,11,composite,composite,1,131,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1792,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1793,11,composite,composite,1,131,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1794,11,composite,composite,1,137,0,0,"step 3: shared factor",7.9
+exhaustive,"all n",1795,11,composite,composite,1,151,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1796,11,composite,composite,1,131,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1797,11,composite,composite,1,157,0,0,"step 3: shared factor",12.6
+exhaustive,"all n",1798,11,composite,composite,1,131,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1799,11,composite,composite,1,131,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1800,11,composite,composite,1,131,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1801,11,prime,prime,1,127,122,122,"step 6: all congruences hold",763441.7
+exhaustive,"all n",1802,11,composite,composite,1,137,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1803,11,composite,composite,1,139,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1804,11,composite,composite,1,137,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1805,11,composite,composite,1,137,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1806,11,composite,composite,1,131,0,0,"step 3: shared factor",7.5
+exhaustive,"all n",1807,11,composite,composite,1,127,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1808,11,composite,composite,1,137,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1809,11,composite,composite,1,131,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1810,11,composite,composite,1,137,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1811,11,prime,prime,1,149,132,132,"step 6: all congruences hold",1075250.1
+exhaustive,"all n",1812,11,composite,composite,1,137,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1813,11,composite,composite,1,131,0,0,"step 3: shared factor",11.4
+exhaustive,"all n",1814,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1815,11,composite,composite,1,149,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1816,11,composite,composite,1,137,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1817,11,composite,composite,1,127,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1818,11,composite,composite,1,131,0,0,"step 3: shared factor",7.2
+exhaustive,"all n",1819,11,composite,composite,1,131,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1820,11,composite,composite,1,149,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1821,11,composite,composite,1,127,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1822,11,composite,composite,1,131,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1823,11,prime,prime,1,127,122,122,"step 6: all congruences hold",808927.2
+exhaustive,"all n",1824,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1825,11,composite,composite,1,131,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1826,11,composite,composite,1,127,0,0,"step 3: shared factor",8.2
+exhaustive,"all n",1827,11,composite,composite,1,131,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1828,11,composite,composite,1,137,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1829,11,composite,composite,1,131,0,0,"step 3: shared factor",12.0
+exhaustive,"all n",1830,11,composite,composite,1,131,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1831,11,prime,prime,1,127,122,122,"step 6: all congruences hold",810784.7
+exhaustive,"all n",1832,11,composite,composite,1,137,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1833,11,composite,composite,1,127,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1834,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1835,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1836,11,composite,composite,1,127,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1837,11,composite,composite,1,163,0,0,"step 3: shared factor",14.8
+exhaustive,"all n",1838,11,composite,composite,1,137,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1839,11,composite,composite,1,137,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1840,11,composite,composite,1,131,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1841,11,composite,composite,1,157,0,0,"step 3: shared factor",12.2
+exhaustive,"all n",1842,11,composite,composite,1,131,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1843,11,composite,composite,1,127,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1844,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1845,11,composite,composite,1,127,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1846,11,composite,composite,1,149,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1847,11,prime,prime,1,137,127,127,"step 6: all congruences hold",985360.6
+exhaustive,"all n",1848,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1849,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1850,11,composite,composite,1,149,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1851,11,composite,composite,1,131,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1852,11,composite,composite,1,137,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1853,11,composite,composite,1,149,0,0,"step 3: shared factor",14.4
+exhaustive,"all n",1854,11,composite,composite,1,149,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1855,11,composite,composite,1,173,0,0,"step 3: shared factor",11.9
+exhaustive,"all n",1856,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1857,11,composite,composite,1,131,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1858,11,composite,composite,1,149,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1859,11,composite,composite,1,149,0,0,"step 3: shared factor",13.2
+exhaustive,"all n",1860,11,composite,composite,1,131,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1861,11,prime,prime,1,127,122,122,"step 6: all congruences hold",849058.0
+exhaustive,"all n",1862,11,composite,composite,1,149,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1863,11,composite,composite,1,127,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1864,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1865,11,composite,composite,1,131,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1866,11,composite,composite,1,137,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1867,11,prime,prime,1,137,127,127,"step 6: all congruences hold",994626.2
+exhaustive,"all n",1868,11,composite,composite,1,139,0,0,"step 3: shared factor",10.3
+exhaustive,"all n",1869,11,composite,composite,1,127,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1870,11,composite,composite,1,127,0,0,"step 3: shared factor",7.1
+exhaustive,"all n",1871,11,prime,prime,1,127,123,123,"step 6: all congruences hold",873924.0
+exhaustive,"all n",1872,11,composite,composite,1,137,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1873,11,prime,prime,1,137,127,127,"step 6: all congruences hold",1005794.6
+exhaustive,"all n",1874,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1875,11,composite,composite,1,127,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1876,11,composite,composite,1,137,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1877,11,prime,prime,1,139,128,128,"step 6: all congruences hold",1037529.0
+exhaustive,"all n",1878,11,composite,composite,1,137,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1879,11,prime,prime,1,127,123,123,"step 6: all congruences hold",887806.6
+exhaustive,"all n",1880,11,composite,composite,1,139,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1881,11,composite,composite,1,149,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1882,11,composite,composite,1,149,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1883,11,composite,composite,1,137,0,0,"step 3: shared factor",12.6
+exhaustive,"all n",1884,11,composite,composite,1,127,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1885,11,composite,composite,1,137,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1886,11,composite,composite,1,149,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1887,11,composite,composite,1,127,0,0,"step 3: shared factor",9.2
+exhaustive,"all n",1888,11,composite,composite,1,127,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1889,11,prime,prime,1,137,127,127,"step 6: all congruences hold",1127077.4
+exhaustive,"all n",1890,11,composite,composite,1,127,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1891,11,composite,composite,1,131,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1892,11,composite,composite,1,127,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1893,11,composite,composite,1,179,0,0,"step 3: shared factor",15.1
+exhaustive,"all n",1894,11,composite,composite,1,127,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1895,11,composite,composite,1,137,0,0,"step 3: shared factor",11.2
+exhaustive,"all n",1896,11,composite,composite,1,127,0,0,"step 3: shared factor",7.4
+exhaustive,"all n",1897,11,composite,composite,1,137,0,0,"step 3: shared factor",11.8
+exhaustive,"all n",1898,11,composite,composite,1,137,0,0,"step 3: shared factor",11.3
+exhaustive,"all n",1899,11,composite,composite,1,139,0,0,"step 3: shared factor",11.1
+exhaustive,"all n",1900,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1901,11,prime,prime,1,131,125,125,"step 6: all congruences hold",1060229.1
+exhaustive,"all n",1902,11,composite,composite,1,157,0,0,"step 3: shared factor",11.4
+exhaustive,"all n",1903,11,composite,composite,1,149,0,0,"step 3: shared factor",12.6
+exhaustive,"all n",1904,11,composite,composite,1,157,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1905,11,composite,composite,1,137,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1906,11,composite,composite,1,131,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1907,11,prime,prime,1,163,139,139,"step 6: all congruences hold",1566575.3
+exhaustive,"all n",1908,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1909,11,composite,composite,1,139,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1910,11,composite,composite,1,131,0,0,"step 3: shared factor",8.5
+exhaustive,"all n",1911,11,composite,composite,1,127,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1912,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1913,11,prime,prime,1,137,128,128,"step 6: all congruences hold",1133317.9
+exhaustive,"all n",1914,11,composite,composite,1,149,0,0,"step 3: shared factor",9.4
+exhaustive,"all n",1915,11,composite,composite,1,137,0,0,"step 3: shared factor",11.3
+exhaustive,"all n",1916,11,composite,composite,1,131,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1917,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1918,11,composite,composite,1,139,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1919,11,composite,composite,1,127,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1920,11,composite,composite,1,151,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1921,11,composite,composite,1,131,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1922,11,composite,composite,1,131,0,0,"step 3: shared factor",9.8
+exhaustive,"all n",1923,11,composite,composite,1,137,0,0,"step 3: shared factor",10.5
+exhaustive,"all n",1924,11,composite,composite,1,131,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1925,11,composite,composite,1,149,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1926,11,composite,composite,1,139,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1927,11,composite,composite,1,131,0,0,"step 3: shared factor",11.8
+exhaustive,"all n",1928,11,composite,composite,1,127,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1929,11,composite,composite,1,131,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1930,11,composite,composite,1,131,0,0,"step 3: shared factor",8.0
+exhaustive,"all n",1931,11,prime,prime,1,131,125,125,"step 6: all congruences hold",1058077.3
+exhaustive,"all n",1932,11,composite,composite,1,131,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1933,11,prime,prime,1,139,129,129,"step 6: all congruences hold",1155541.3
+exhaustive,"all n",1934,11,composite,composite,1,127,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1935,11,composite,composite,1,139,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1936,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+exhaustive,"all n",1937,11,composite,composite,1,131,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1938,11,composite,composite,1,131,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1939,11,composite,composite,1,137,0,0,"step 3: shared factor",11.0
+exhaustive,"all n",1940,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1941,11,composite,composite,1,137,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1942,11,composite,composite,1,137,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1943,11,composite,composite,1,167,0,0,"step 3: shared factor",16.1
+exhaustive,"all n",1944,11,composite,composite,1,127,0,0,"step 3: shared factor",8.1
+exhaustive,"all n",1945,11,composite,composite,1,131,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1946,11,composite,composite,1,151,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1947,11,composite,composite,1,137,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1948,11,composite,composite,1,127,0,0,"step 3: shared factor",8.8
+exhaustive,"all n",1949,11,prime,prime,1,131,125,125,"step 6: all congruences hold",1044418.1
+exhaustive,"all n",1950,11,composite,composite,1,127,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1951,11,prime,prime,1,127,123,123,"step 6: all congruences hold",957511.7
+exhaustive,"all n",1952,11,composite,composite,1,131,0,0,"step 3: shared factor",9.9
+exhaustive,"all n",1953,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1954,11,composite,composite,1,131,0,0,"step 3: shared factor",8.6
+exhaustive,"all n",1955,11,composite,composite,1,149,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1956,11,composite,composite,1,131,0,0,"step 3: shared factor",7.6
+exhaustive,"all n",1957,11,composite,composite,1,157,0,0,"step 3: shared factor",13.9
+exhaustive,"all n",1958,11,composite,composite,1,127,0,0,"step 3: shared factor",8.3
+exhaustive,"all n",1959,11,composite,composite,1,163,0,0,"step 3: shared factor",11.9
+exhaustive,"all n",1960,11,composite,composite,1,127,0,0,"step 3: shared factor",7.3
+exhaustive,"all n",1961,11,composite,composite,1,127,0,0,"step 3: shared factor",10.9
+exhaustive,"all n",1962,11,composite,composite,1,127,0,0,"step 3: shared factor",7.7
+exhaustive,"all n",1963,11,composite,composite,1,127,0,0,"step 3: shared factor",10.6
+exhaustive,"all n",1964,11,composite,composite,1,137,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1965,11,composite,composite,1,137,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1966,11,composite,composite,1,137,0,0,"step 3: shared factor",9.1
+exhaustive,"all n",1967,11,composite,composite,1,131,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1968,11,composite,composite,1,139,0,0,"step 3: shared factor",7.8
+exhaustive,"all n",1969,11,composite,composite,1,137,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1970,11,composite,composite,1,127,0,0,"step 3: shared factor",17.3
+exhaustive,"all n",1971,11,composite,composite,1,131,0,0,"step 3: shared factor",19.6
+exhaustive,"all n",1972,11,composite,composite,1,127,0,0,"step 3: shared factor",12.8
+exhaustive,"all n",1973,11,prime,prime,1,131,125,125,"step 6: all congruences hold",1084065.2
+exhaustive,"all n",1974,11,composite,composite,1,163,0,0,"step 3: shared factor",10.0
+exhaustive,"all n",1975,11,composite,composite,1,131,0,0,"step 3: shared factor",10.4
+exhaustive,"all n",1976,11,composite,composite,1,137,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1977,11,composite,composite,1,149,0,0,"step 3: shared factor",11.4
+exhaustive,"all n",1978,11,composite,composite,1,139,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1979,11,prime,prime,1,131,125,125,"step 6: all congruences hold",1110144.0
+exhaustive,"all n",1980,11,composite,composite,1,137,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1981,11,composite,composite,1,157,0,0,"step 3: shared factor",12.1
+exhaustive,"all n",1982,11,composite,composite,1,131,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1983,11,composite,composite,1,127,0,0,"step 3: shared factor",9.7
+exhaustive,"all n",1984,11,composite,composite,1,137,0,0,"step 3: shared factor",8.7
+exhaustive,"all n",1985,11,composite,composite,1,137,0,0,"step 3: shared factor",10.8
+exhaustive,"all n",1986,11,composite,composite,1,139,0,0,"step 3: shared factor",9.0
+exhaustive,"all n",1987,11,prime,prime,1,131,125,125,"step 6: all congruences hold",1199416.7
+exhaustive,"all n",1988,11,composite,composite,1,127,0,0,"step 3: shared factor",9.3
+exhaustive,"all n",1989,11,composite,composite,1,137,0,0,"step 3: shared factor",9.6
+exhaustive,"all n",1990,11,composite,composite,1,127,0,0,"step 3: shared factor",7.0
+exhaustive,"all n",1991,11,composite,composite,1,127,0,0,"step 3: shared factor",10.7
+exhaustive,"all n",1992,11,composite,composite,1,149,0,0,"step 3: shared factor",8.9
+exhaustive,"all n",1993,11,prime,prime,1,137,128,128,"step 6: all congruences hold",1302503.9
+exhaustive,"all n",1994,11,composite,composite,1,131,0,0,"step 3: shared factor",10.2
+exhaustive,"all n",1995,11,composite,composite,1,131,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1996,11,composite,composite,1,127,0,0,"step 3: shared factor",8.4
+exhaustive,"all n",1997,11,prime,prime,1,127,124,124,"step 6: all congruences hold",1144604.9
+exhaustive,"all n",1998,11,composite,composite,1,127,0,0,"step 3: shared factor",9.5
+exhaustive,"all n",1999,11,prime,prime,1,139,129,129,"step 6: all congruences hold",1326606.8
+exhaustive,"all n",2000,11,composite,composite,1,137,0,0,"step 3: shared factor",10.6
+hard,"zero",0,0,composite,composite,1,0,0,0,"n < 2",0.1
+hard,"one",1,1,composite,composite,1,0,0,0,"n < 2",0.1
+hard,"smallest prime",2,2,prime,prime,1,3,0,0,"step 4: n <= r",0.5
+hard,"prime",3,2,prime,prime,1,5,0,0,"step 4: n <= r",0.4
+hard,"smallest composite",4,3,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+hard,"Carmichael",561,10,composite,composite,1,89,0,0,"step 3: shared factor",7.6
+hard,"Carmichael",1105,11,composite,composite,1,131,0,0,"step 3: shared factor",12.6
+hard,"Carmichael (Hardy-Ramanujan)",1729,11,composite,composite,1,127,0,0,"step 3: shared factor",13.1
+hard,"Carmichael",2465,12,composite,composite,1,139,0,0,"step 3: shared factor",12.5
+hard,"Carmichael",2821,12,composite,composite,1,149,0,0,"step 3: shared factor",15.1
+hard,"Carmichael",6601,13,composite,composite,1,173,0,0,"step 3: shared factor",18.9
+hard,"Carmichael",8911,14,composite,composite,1,179,0,0,"step 3: shared factor",21.1
+hard,"Carmichael",41041,16,composite,composite,1,241,0,0,"step 3: shared factor",30.0
+hard,"Carmichael",825265,20,composite,composite,1,397,0,0,"step 3: shared factor",61.8
+hard,"strong pseudoprime base 2",2047,11,composite,composite,1,131,0,0,"step 3: shared factor",15.1
+hard,"strong pseudoprime base 2",3277,12,composite,composite,1,151,0,0,"step 3: shared factor",17.5
+hard,"strong pseudoprime bases 2,3",1373653,21,composite,composite,1,431,423,1,"step 5: congruence failed",402189.2
+hard,"strong pseudoprime bases 2,3,5",25326001,25,composite,composite,1,607,606,1,"step 5: congruence failed",1031679.5
+hard,"strong pseudoprime bases 2,3,5,7",3215031751,32,composite,composite,1,1013,0,0,"step 3: shared factor",292.1
+hard,"power of two",1024,11,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+hard,"5^5",3125,12,composite,composite,1,0,0,0,"step 1: perfect power",1.1
+hard,"3^8",6561,13,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+hard,"101^2",10201,14,composite,composite,1,0,0,0,"step 1: perfect power",0.2
+hard,"Mersenne prime 2^7-1",127,7,prime,prime,1,53,51,51,"step 6: all congruences hold",14736.3
+hard,"Mersenne prime 2^13-1",8191,13,prime,prime,1,179,174,174,"step 6: all congruences hold",4899228.7
+hard,"Mersenne prime 2^17-1",131071,17,prime,prime,1,331,309,309,"step 6: all congruences hold",60835123.1
+hard,"Mersenne prime 2^19-1",524287,19,prime,prime,1,373,367,367,"step 6: all congruences hold",122216596.1
+hard,"prime",10007,14,prime,prime,1,179,178,178,"step 6: all congruences hold",4512875.5
+hard,"prime",100003,17,prime,prime,1,277,276,276,"step 6: all congruences hold",27545901.7
+hard,"101 * 103 (twin primes)",10403,14,composite,composite,1,191,0,0,"step 3: shared factor",34.2
+hard,"1009 * 1013",1022117,20,composite,composite,1,409,404,1,"step 5: congruence failed",273719.7
+scaling,"largest prime below 2^bits",251,8,prime,prime,1,67,65,65,"step 6: all congruences hold",58419.2
+scaling,"prime square",169,8,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+scaling,"semiprime near sqrt",221,8,composite,composite,1,67,0,0,"step 3: shared factor",5.4
+scaling,"3 * prime",249,8,composite,composite,1,67,0,0,"step 3: shared factor",4.1
+scaling,"largest prime below 2^bits",509,9,prime,prime,1,131,103,103,"step 6: all congruences hold",432679.6
+scaling,"prime square",361,9,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+scaling,"semiprime near sqrt",437,9,composite,composite,1,83,0,0,"step 3: shared factor",7.4
+scaling,"3 * prime",501,9,composite,composite,1,89,0,0,"step 3: shared factor",5.6
+scaling,"largest prime below 2^bits",1021,10,prime,prime,1,101,100,100,"step 6: all congruences hold",475611.6
+scaling,"prime square",961,10,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",1147,11,composite,composite,1,107,0,0,"step 3: shared factor",12.6
+scaling,"3 * prime",1011,10,composite,composite,1,103,0,0,"step 3: shared factor",8.8
+scaling,"largest prime below 2^bits",2039,11,prime,prime,1,127,124,124,"step 6: all congruences hold",1285136.3
+scaling,"prime square",1849,11,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",2021,11,composite,composite,1,127,0,0,"step 3: shared factor",16.4
+scaling,"3 * prime",2031,11,composite,composite,1,131,0,0,"step 3: shared factor",13.0
+scaling,"largest prime below 2^bits",4093,12,prime,prime,1,149,146,146,"step 6: all congruences hold",2523696.6
+scaling,"prime square",3721,12,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+scaling,"semiprime near sqrt",4087,12,composite,composite,1,157,0,0,"step 3: shared factor",17.4
+scaling,"3 * prime",4083,12,composite,composite,1,149,0,0,"step 3: shared factor",12.8
+scaling,"largest prime below 2^bits",8191,13,prime,prime,1,179,174,174,"step 6: all congruences hold",4841057.3
+scaling,"prime square",7921,13,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+scaling,"semiprime near sqrt",8633,14,composite,composite,1,173,0,0,"step 3: shared factor",20.2
+scaling,"3 * prime",8187,13,composite,composite,1,179,0,0,"step 3: shared factor",16.1
+scaling,"largest prime below 2^bits",16381,14,prime,prime,1,197,196,196,"step 6: all congruences hold",8574909.7
+scaling,"prime square",16129,14,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+scaling,"semiprime near sqrt",16637,15,composite,composite,1,199,0,0,"step 3: shared factor",26.1
+scaling,"3 * prime",16347,14,composite,composite,1,239,0,0,"step 3: shared factor",24.0
+scaling,"largest prime below 2^bits",32749,15,prime,prime,1,227,226,226,"step 6: all congruences hold",15251517.8
+scaling,"prime square",32041,15,composite,composite,1,0,0,0,"step 1: perfect power",0.3
+scaling,"semiprime near sqrt",34189,16,composite,composite,1,251,0,0,"step 3: shared factor",33.2
+scaling,"3 * prime",32727,15,composite,composite,1,227,0,0,"step 3: shared factor",23.7
+scaling,"largest prime below 2^bits",65521,16,prime,prime,1,257,256,256,"step 6: all congruences hold",26319910.0
+scaling,"prime square",63001,16,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",64507,16,composite,composite,1,293,0,0,"step 3: shared factor",45.0
+scaling,"3 * prime",65523,16,composite,composite,1,257,0,0,"step 3: shared factor",29.9
+scaling,"largest prime below 2^bits",131071,17,prime,prime,1,331,309,309,"step 6: all congruences hold",59373811.3
+scaling,"prime square",128881,17,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",131753,18,composite,composite,1,307,298,1,"step 5: congruence failed",96302.6
+scaling,"3 * prime",131007,17,composite,composite,1,311,0,0,"step 3: shared factor",38.8
+scaling,"largest prime below 2^bits",262139,18,prime,prime,1,349,336,336,"step 6: all congruences hold",82251361.1
+scaling,"prime square",259081,18,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",265189,19,composite,composite,1,373,348,1,"step 5: congruence failed",176632.5
+scaling,"3 * prime",262077,18,composite,composite,1,337,0,0,"step 3: shared factor",43.5
+scaling,"largest prime below 2^bits",524287,19,prime,prime,1,373,367,367,"step 6: all congruences hold",119447045.4
+scaling,"prime square",516961,19,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",522713,19,composite,composite,1,379,370,1,"step 5: congruence failed",271066.6
+scaling,"3 * prime",524283,19,composite,composite,1,373,0,0,"step 3: shared factor",58.8
+scaling,"largest prime below 2^bits",1048573,20,prime,prime,1,401,400,400,"step 6: all congruences hold",173945242.5
+scaling,"prime square",1042441,20,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",1052651,21,composite,composite,1,433,416,1,"step 5: congruence failed",352425.6
+scaling,"3 * prime",1048557,20,composite,composite,1,421,0,0,"step 3: shared factor",64.2
+scaling,"largest prime below 2^bits",2097143,21,prime,prime,1,449,445,445,"step 6: all congruences hold",272759892.7
+scaling,"prime square",2093809,21,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",2099597,22,composite,composite,1,449,445,1,"step 5: congruence failed",331072.5
+scaling,"3 * prime",2097111,21,composite,composite,1,443,0,0,"step 3: shared factor",66.1
+scaling,"largest prime below 2^bits",4194301,22,prime,prime,1,487,485,485,"step 6: all congruences hold",395672872.9
+scaling,"prime square",4157521,22,composite,composite,1,0,0,0,"step 1: perfect power",0.4
+scaling,"semiprime near sqrt",4186067,22,composite,composite,1,491,487,1,"step 5: congruence failed",708410.2
+scaling,"3 * prime",4194273,22,composite,composite,1,487,0,0,"step 3: shared factor",82.4
