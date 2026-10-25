@@ -10,6 +10,11 @@ using u64 = uint64_t;
 
 namespace mod_arith {
 
+    //calculates (a + b) % m
+    inline u64 addmod(u64 a, u64 b, u64 m){
+        return a >= m - b ? a - (m - b) : a + b;
+    }
+
     //calculates (a * b) % m
     inline u64 mulmod(u64 a, u64 b, u64 m){
         #ifdef __SIZEOF_INT128__
@@ -24,11 +29,6 @@ namespace mod_arith {
                 }
                 return result;
         #endif
-    }
-
-    //calculates (a + b) % m
-    inline u64 addmod(u64 a, u64 b, u64 m){
-        return a >= m - b ? a - (m - b) : a + b;
     }
 
     //calculates (a ^ b) % m
