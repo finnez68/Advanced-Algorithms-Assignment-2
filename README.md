@@ -1,4 +1,4 @@
-# Advanced Algorithms Assignment 2: Primality Testing
+<img width="158" height="205" alt="image" src="https://github.com/user-attachments/assets/8ac66906-bc84-467d-a890-eea0f9b1b65d" /># Advanced Algorithms Assignment 2: Primality Testing
 
 Theme 2, deterministic vs randomised. Given an integer 1 ≤ n < 2⁶⁴, decide
 whether n is **prime**, **composite**, or **neither** (n = 1).
@@ -134,8 +134,8 @@ division and AKS; the Miller-Rabin tests take milliseconds.
 
 ```
 AKS/                 Finley: aks.cpp, aks_testing.cpp, aks_results.csv
-MillerRabinFixed/    Atnm:   miller_rabin_fixed.cpp
-MillerRabinRandom/   Dino:   miller_rabin_random.cpp
+MillerRabinFixed/    atnm:   miller_rabin_fixed.cpp
+MillerRabinRandom/   UShadow03:   miller_rabin_random.cpp
 common/              primality.h, modular_arithmetic.h, aks_adapter.cpp, trial_division.cpp
 gui/                 main.cpp (window), app.* (UI), runner.* (background runs + timing),
                      number_input.* (parsing the Number box)
