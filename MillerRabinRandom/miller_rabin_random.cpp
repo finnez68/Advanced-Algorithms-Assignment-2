@@ -49,7 +49,7 @@ bool isWitness(u64 a, u64 n, u64 d, int s) {
 } // namespace
 
 Verdict millerRabinRandom(std::uint64_t n, int rounds, std::mt19937_64& rng) {
-    if (n < 2) return Verdict::Composite;
+    if (n < 2) return Verdict::Neither;
     if (n < 4) return Verdict::Prime;              // 2 and 3 are definite
     if (n % 2 == 0) return Verdict::Composite;
 
