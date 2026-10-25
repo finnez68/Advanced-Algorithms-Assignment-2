@@ -20,9 +20,16 @@ u64 modular_arithmetic::mulmod(u64 a, u64 b, u64 m) {
 }
 
 u64 modular_arithmetic::addmod(u64 a, u64 b, u64 m) {
-
+    return a >= m - b ? a - (m - b) : a + b;
 }
 
-u64 modular_arithmetic::powmod(u64 a, u64 b, u64 m) {
-
+u64 modular_arithmetic::powmod(u64 a, u64 e, u64 m) {
+    u64 result = 1 % m;
+    a %= m;
+    while (e) {
+        if (e & 1) result = mulmod(result, a, m);
+        e >>= 1;
+        if (e) a = mulmod(a, a, m);
+    }
+    return result;
 }
