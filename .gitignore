@@ -66,3 +66,9 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# IDE / app files
+cmake-build-*/
+.idea/
+isprime_settings.json
+imgui.ini
