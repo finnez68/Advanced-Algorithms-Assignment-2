@@ -16,7 +16,9 @@ add_library(primality STATIC
     MillerRabinFixed/miller_rabin_fixed.cpp    # Atnm
     MillerRabinRandom/miller_rabin_random.cpp  # Dino
     common/aks_adapter.cpp                     # Finley's AKS/aks.cpp, via the shared interface
-    common/trial_division.cpp                  # reference oracle
+    common/trial_division.cpp
+        common/modular_arithmetic.cpp
+        common/modular_arithmetic.h                  # reference oracle
 )
 target_include_directories(primality PUBLIC common)
 
@@ -36,6 +38,8 @@ add_executable(tests
     tests/test_algorithms.cpp
     tests/test_number_input.cpp
     gui/number_input.cpp
+        common/modular_arithmetic.cpp
+        common/modular_arithmetic.h
 )
 target_include_directories(tests PRIVATE gui)
 target_link_libraries(tests PRIVATE primality gtest_main)
@@ -84,6 +88,8 @@ if(ISPRIME_BUILD_GUI)
         ${imgui_SOURCE_DIR}/backends/imgui_impl_glfw.cpp
         ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
         ${tinyfiledialogs_SOURCE_DIR}/tinyfiledialogs.c
+            common/modular_arithmetic.cpp
+            common/modular_arithmetic.h
     )
     target_include_directories(isPrime PRIVATE
         gui
