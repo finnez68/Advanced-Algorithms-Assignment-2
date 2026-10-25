@@ -26,6 +26,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
+#include "../common/modular_arithmetic.h"
 
 using u64 = uint64_t;
 
@@ -40,22 +41,22 @@ static u64 gcd64(u64 a, u64 b) {
     return a;
 }
 
-static inline u64 addmod(u64 a, u64 b, u64 m) {
-    // Inputs are reduced modulo m; avoid overflow in a+b.
-    return a >= m - b ? a - (m - b) : a + b;
-}
-
-static inline u64 mulmod(u64 a, u64 b, u64 m) {
-    // Portable double-and-add multiplication modulo m.
-    u64 result = 0;
-    a %= m;
-    while (b) {
-        if (b & 1) result = addmod(result, a, m);
-        b >>= 1;
-        if (b) a = addmod(a, a, m);
-    }
-    return result;
-}
+// static inline u64 addmod(u64 a, u64 b, u64 m) {
+//     // Inputs are reduced modulo m; avoid overflow in a+b.
+//     return a >= m - b ? a - (m - b) : a + b;
+// }
+//
+// static inline u64 mulmod(u64 a, u64 b, u64 m) {
+//     // Portable double-and-add multiplication modulo m.
+//     u64 result = 0;
+//     a %= m;
+//     while (b) {
+//         if (b & 1) result = addmod(result, a, m);
+//         b >>= 1;
+//         if (b) a = addmod(a, a, m);
+//     }
+//     return result;
+// }
 
 // min(a^b, cap + 1), computed without overflow.
 static u64 pow_saturating(u64 a, int b, u64 cap) {
@@ -109,7 +110,7 @@ static Poly poly_mul(const Poly& A, const Poly& B, u64 n, size_t r) {
             if (!B[j]) continue;
             size_t k = i + j;
             if (k >= r) k -= r;
-            C[k] = addmod(C[k], mulmod(A[i], B[j], n), n);
+            C[k] = mod_arith::addmod(C[k], mod_arith::mulmod(A[i], B[j], n), n);
         }
     }
     return C;
@@ -181,7 +182,7 @@ static bool aks_is_prime(u64 n) {
         Poly lhs = poly_pow_x_plus_a(a, n, n, rr);
         Poly rhs(rr, 0);
         rhs[n % r] = 1;
-        rhs[0] = addmod(rhs[0], a % n, n);
+        rhs[0] = mod_arith::addmod(rhs[0], a % n, n);
         g_stats.checked = a;
         if (lhs != rhs) { g_stats.reason = "step 5: congruence failed"; return false; }
     }
