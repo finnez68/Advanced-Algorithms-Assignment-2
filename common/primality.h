@@ -32,7 +32,8 @@ Verdict millerRabinFixed(std::uint64_t n);
 
 // --- Miller-Rabin with random bases ---------------------- author: Dino ---
 // `rounds` independent random bases drawn from `rng`. Returns ProbablyPrime
-// (never Prime) when n passes every round; error probability <= 4^-rounds.
+// when n passes every round (error probability <= 4^-rounds); a definite
+// Prime only for n = 2 and 3, which are decided before any rounds run.
 // The caller owns the RNG so runs can be made reproducible with a seed.
 Verdict millerRabinRandom(std::uint64_t n, int rounds, std::mt19937_64& rng);
 

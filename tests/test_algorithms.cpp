@@ -55,9 +55,18 @@ TEST(MillerRabinRandom, AgreesWithTrialDivisionUpTo200000) {
         ASSERT_EQ(Normalised(millerRabinRandom(n, 20, rng)), trialDivision(n)) << "n = " << n;
 }
 
-TEST(MillerRabinRandom, NeverClaimsCertainty) {
+TEST(MillerRabinRandom, NeverClaimsCertaintyAbove3) {
+    // 2 and 3 are handled before any random rounds run, so a definite
+    // "Prime" is correct there. Every larger prime goes through the random
+    // rounds and must only ever be reported as "probably" prime.
     std::mt19937_64 rng(12345);
-    for (auto p : kPrimes) EXPECT_EQ(millerRabinRandom(p, 20, rng), Verdict::ProbablyPrime) << p;
+    for (auto p : kPrimes) {
+        if (p < 4) {
+            EXPECT_EQ(Normalised(millerRabinRandom(p, 20, rng)), Verdict::Prime) << p;
+        } else {
+            EXPECT_EQ(millerRabinRandom(p, 20, rng), Verdict::ProbablyPrime) << p;
+        }
+    }
 }
 
 TEST(MillerRabinRandom, HardCases) {
