@@ -2,44 +2,45 @@
 // Primary author: Dino
 
 #include "primality.h"
+#include "modular_arithmetic.h"
 
 namespace {
 
 using u64 = std::uint64_t;
 
-inline u64 addmod(u64 a, u64 b, u64 m) {
-    return a >= m - b ? a - (m - b) : a + b;
-}
-
-inline u64 mulmod(u64 a, u64 b, u64 m) {
-    u64 result = 0;
-    a %= m;
-    while (b) {
-        if (b & 1) result = addmod(result, a, m);
-        b >>= 1;
-        if (b) a = addmod(a, a, m);
-    }
-    return result;
-}
-
-u64 powmod(u64 a, u64 e, u64 m) {
-    u64 result = 1 % m;
-    a %= m;
-    while (e) {
-        if (e & 1) result = mulmod(result, a, m);
-        e >>= 1;
-        if (e) a = mulmod(a, a, m);
-    }
-    return result;
-}
+// inline u64 addmod(u64 a, u64 b, u64 m) {
+//     return a >= m - b ? a - (m - b) : a + b;
+// }
+//
+// inline u64 mulmod(u64 a, u64 b, u64 m) {
+//     u64 result = 0;
+//     a %= m;
+//     while (b) {
+//         if (b & 1) result = addmod(result, a, m);
+//         b >>= 1;
+//         if (b) a = addmod(a, a, m);
+//     }
+//     return result;
+// }
+//
+// u64 powmod(u64 a, u64 e, u64 m) {
+//     u64 result = 1 % m;
+//     a %= m;
+//     while (e) {
+//         if (e & 1) result = mulmod(result, a, m);
+//         e >>= 1;
+//         if (e) a = mulmod(a, a, m);
+//     }
+//     return result;
+// }
 
 // n odd, n > 3, n - 1 = 2^s * d with d odd.
 // Returns true if base a PROVES n composite.
 bool isWitness(u64 a, u64 n, u64 d, int s) {
-    u64 x = powmod(a, d, n);
+    u64 x = mod_arith::powmod(a, d, n);
     if (x == 1 || x == n - 1) return false;
     for (int i = 1; i < s; i++) {
-        x = mulmod(x, x, n);
+        x = mod_arith::mulmod(x, x, n);
         if (x == n - 1) return false;
     }
     return true;
