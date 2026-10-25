@@ -5,8 +5,8 @@ whether n is **prime**, **composite**, or **neither** (n = 1).
 
 | Algorithm | Kind | Primary author | Code |
 |---|---|---|---|
-| Miller-Rabin with fixed witness sets | deterministic for 64-bit n | Atnm | `MillerRabinFixed/` |
-| Miller-Rabin with random bases | randomised, error ≤ 4⁻ᵏ | Dino | `MillerRabinRandom/` |
+| Miller-Rabin with fixed witness sets | deterministic for 64-bit n | atnm | `MillerRabinFixed/` |
+| Miller-Rabin with random bases | randomised, error ≤ 4⁻ᵏ | UShadow03 | `MillerRabinRandom/` |
 | AKS | deterministic, polynomial time | Finley | `AKS/` |
 | Trial division | reference oracle for testing | — | `common/trial_division.cpp` |
 
