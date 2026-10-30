@@ -1,4 +1,4 @@
-<img width="158" height="205" alt="image" src="https://github.com/user-attachments/assets/8ac66906-bc84-467d-a890-eea0f9b1b65d" /># Advanced Algorithms Assignment 2: Primality Testing
+# Advanced Algorithms Assignment 2: Primality Testing
 
 Theme 2, deterministic vs randomised. Given an integer 1 ≤ n < 2⁶⁴, decide
 whether n is **prime**, **composite**, or **neither** (n = 1).
