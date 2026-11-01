@@ -8,9 +8,13 @@ using u64 = uint64_t;
 
 bool doesBasePass(u64 n, u64 a_mod_n, u64 nMinusOneFactor, int nMinusOneHalvedByThisCount) {
     u64 x = mod_arith::powmod(a_mod_n, nMinusOneFactor, n);
+
+    //fermat test
     if (x == 1 || x == n-1) {
         return true;
     }
+
+    //miller-rabin extension
     for (int i = 1; i <= nMinusOneHalvedByThisCount-1; i++) {
         x = mod_arith::mulmod(x, x, n);
         if (x == n-1) {
@@ -36,15 +40,15 @@ Verdict millerRabinFixed(std::uint64_t n) {
     }
 
     //primality testing
-    constexpr u64 fixedWitnessSet[] = {2,3,5,7,11,13,17,19,23,29,31,37};
+    constexpr u64 fixedWitnessSet[] = {2,3,5,7,11,13,17,19,23,29,31,37}; //this set of primes is enough to test every possible 64 bit integer, but larger numbers will need a extended/different set
     for (u64 a : fixedWitnessSet) {
         u64 a_mod_n = a % n;
-        if (a_mod_n == 0) continue;
+        if (a_mod_n == 0) continue; //we skip because a % n being 0 means it will result in a composite verdict in the next step even if n is prime. 
         
-        //fermat + Miller-Rabin test function
+        //fermat + Miller-Rabin test function. if it fails we have disproven that n is prime and we have reached a composite verdict
         if (!doesBasePass(n, a_mod_n, nMinusOneFactor, nMinusOneHalvedByThisCount)) return Verdict::Composite;
     }
-    return Verdict::Prime;
+    return Verdict::Prime; //since n cannot be larger than the size of a 64 bit integer, we are guaranteed to have a prime.
 }
 
 bool millerRabinFixedIsPlaceholder() { return false; }
