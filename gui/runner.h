@@ -12,6 +12,7 @@
 #include <array>
 #include <atomic>
 #include <cstdint>
+#include <functional>
 #include <memory>
 #include <string>
 
@@ -49,6 +50,18 @@ struct AlgorithmInfo {
     bool (*isPlaceholder)();
 };
 extern const std::array<AlgorithmInfo, kAlgorithmCount> kAlgorithms;
+
+// Result of timing one algorithm on one n (see Measure in runner.cpp).
+struct Measurement {
+    Verdict verdict = Verdict::Neither;
+    double secondsPerCall = 0.0;
+    long long calls = 1;
+};
+
+// Times `call`: one run, or if that took under 1 ms (and repeatFast is on),
+// 7 batches of about 1 ms each, reporting the median per-call time.
+// Shared by the GUI rows and the benchmark so both time things the same way.
+Measurement Measure(const std::function<Verdict()>& call, const std::atomic<bool>& cancel, bool repeatFast);
 
 // Starts the background thread and returns immediately. The thread keeps
 // its own reference to the Run, so the UI can drop it at any time.

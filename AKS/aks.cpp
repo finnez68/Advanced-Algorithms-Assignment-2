@@ -41,23 +41,6 @@ static u64 gcd64(u64 a, u64 b) {
     return a;
 }
 
-// static inline u64 addmod(u64 a, u64 b, u64 m) {
-//     // Inputs are reduced modulo m; avoid overflow in a+b.
-//     return a >= m - b ? a - (m - b) : a + b;
-// }
-//
-// static inline u64 mulmod(u64 a, u64 b, u64 m) {
-//     // Portable double-and-add multiplication modulo m.
-//     u64 result = 0;
-//     a %= m;
-//     while (b) {
-//         if (b & 1) result = addmod(result, a, m);
-//         b >>= 1;
-//         if (b) a = addmod(a, a, m);
-//     }
-//     return result;
-// }
-
 // min(a^b, cap + 1), computed without overflow.
 static u64 pow_saturating(u64 a, int b, u64 cap) {
     u64 r = 1;
@@ -141,12 +124,13 @@ struct AksStats {
 
 static AksStats g_stats;
 
-static bool aks_is_prime(u64 n) {
-    g_stats = AksStats{};
-    if (n < 2) { g_stats.reason = "n < 2"; return false; }
+static bool aks_is_prime(u64 n, AksStats* stats = &g_stats) {
+    AksStats& st = *stats;
+    st = AksStats{};
+    if (n < 2) { st.reason = "n < 2"; return false; }
 
     // Step 1
-    if (is_perfect_power(n)) { g_stats.reason = "step 1: perfect power"; return false; }
+    if (is_perfect_power(n)) { st.reason = "step 1: perfect power"; return false; }
 
     // Step 2: smallest r with ord_r(n) > floor(log2(n)^2)
     const long double L = log2l((long double)n);
@@ -162,91 +146,35 @@ static bool aks_is_prime(u64 n) {
         }
         if (!order_small) break;
     }
-    g_stats.r = r;
+    st.r = r;
 
     // Step 3
     for (u64 a = 2; a <= std::min<u64>(r, n - 1); a++) {
         u64 g = gcd64(a, n);
-        if (g > 1 && g < n) { g_stats.reason = "step 3: shared factor"; return false; }
+        if (g > 1 && g < n) { st.reason = "step 3: shared factor"; return false; }
     }
 
     // Step 4
-    if (n <= r) { g_stats.reason = "step 4: n <= r"; return true; }
+    if (n <= r) { st.reason = "step 4: n <= r"; return true; }
 
     // Step 5
     const u64 phi = euler_phi(r);
     const u64 bound = (u64)ceill(sqrtl((long double)phi) * L);
-    g_stats.bound = bound;
+    st.bound = bound;
     const size_t rr = (size_t)r;
     for (u64 a = 1; a <= bound; a++) {
         Poly lhs = poly_pow_x_plus_a(a, n, n, rr);
         Poly rhs(rr, 0);
         rhs[n % r] = 1;
         rhs[0] = mod_arith::addmod(rhs[0], a % n, n);
-        g_stats.checked = a;
-        if (lhs != rhs) { g_stats.reason = "step 5: congruence failed"; return false; }
+        st.checked = a;
+        if (lhs != rhs) { st.reason = "step 5: congruence failed"; return false; }
     }
 
     // Step 6
-    g_stats.reason = "step 6: all congruences hold";
+    st.reason = "step 6: all congruences hold";
     return true;
 }
 
-// ------------------------------------------------------------ test harness
 
-static bool trial_division(u64 n) {
-    if (n < 2) return false;
-    for (u64 d = 2; d * d <= n; d++)
-        if (n % d == 0) return false;
-    return true;
-}
 
-static double seconds_since(std::chrono::steady_clock::time_point t0) {
-    return std::chrono::duration<double>(std::chrono::steady_clock::now() - t0).count();
-}
-
-static void report(u64 n) {
-    auto t0 = std::chrono::steady_clock::now();
-    bool p = aks_is_prime(n);
-    double s = seconds_since(t0);
-    std::printf("%20llu  %-9s r=%-5llu checked=%llu/%llu  %.4fs  (%s)\n",
-                (unsigned long long)n, p ? "PRIME" : "composite",
-                (unsigned long long)g_stats.r, (unsigned long long)g_stats.checked,
-                (unsigned long long)g_stats.bound, s, g_stats.reason);
-}
-
-#ifndef AKS_NO_MAIN
-int main(int argc, char** argv) {
-    if (argc > 1) {
-        for (int i = 1; i < argc; i++) report(std::strtoull(argv[i], nullptr, 10));
-        return 0;
-    }
-
-    // 1. Exhaustive agreement with trial division on small n.
-    const u64 LIMIT = 1000;
-    int mismatches = 0;
-    for (u64 n = 0; n <= LIMIT; n++) {
-        if (aks_is_prime(n) != trial_division(n)) {
-            std::printf("MISMATCH at n = %llu\n", (unsigned long long)n);
-            mismatches++;
-        }
-    }
-    std::printf("Checked 0..%llu against trial division: %d mismatches\n\n",
-                (unsigned long long)LIMIT, mismatches);
-
-    // 2. Hard cases for probabilistic tests, plus some larger primes.
-    std::printf("Selected cases:\n");
-    const u64 cases[] = {
-        561,         // smallest Carmichael number
-        1105, 1729, 2465, 6601, 8911,
-        10007,
-        100003,
-        // Inputs near 2^31 take minutes with schoolbook multiplication (r is
-        // about 1000 and ~1000 congruences must be checked). Try them from the
-        // command line, e.g.:  ./aks 1000003 3215031751 2147483647
-    };
-    for (u64 n : cases) report(n);
-
-    return mismatches ? 1 : 0;
-}
-#endif

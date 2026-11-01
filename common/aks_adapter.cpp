@@ -3,7 +3,7 @@
 //
 // AKS/aks.cpp is a standalone program with its own main(). Defining
 // AKS_NO_MAIN before including it drops that main -- the same trick
-// AKS/aks_testing.cpp uses -- leaving aks_is_prime() to call.
+
 
 #define AKS_NO_MAIN
 #include "../AKS/aks.cpp"
@@ -15,6 +15,12 @@ Verdict aks(std::uint64_t n) {
     // that case as "neither" rather than "composite".
     if (n < 2) return Verdict::Neither;
     return aks_is_prime(n) ? Verdict::Prime : Verdict::Composite;
+}
+
+Verdict aksWithInfo(std::uint64_t n, AksInfo& info) {
+    const Verdict v = aks(n);
+    info = {g_stats.r, g_stats.bound, g_stats.checked, g_stats.reason};
+    return v;
 }
 
 bool aksIsPlaceholder() { return false; }

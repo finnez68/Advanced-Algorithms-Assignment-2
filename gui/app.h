@@ -4,6 +4,7 @@
 #pragma once
 #include "imgui.h"
 #include "runner.h"
+#include "benchmark.h"
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -32,6 +33,12 @@ public:
     bool ConsumeFontRebuild(float& fontPixelSize);
 
 private:
+    // Benchmark
+    bool showBenchmark_ = false;
+    BenchSettings benchSettings_;
+    std::shared_ptr<BenchmarkRun> bench_;
+    std::string benchStatus_;
+    void DrawBenchmarkWindow();
     std::vector<Row> rows_;
     int nextId_ = 1;
 

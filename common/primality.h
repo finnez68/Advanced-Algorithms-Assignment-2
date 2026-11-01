@@ -42,6 +42,17 @@ Verdict millerRabinRandom(std::uint64_t n, int rounds, std::mt19937_64& rng);
 // AKS/aks.cpp; common/aks_adapter.cpp exposes it through this interface.
 Verdict aks(std::uint64_t n);
 
+// AKS's internal statistics for one call, for the benchmark CSV.
+struct AksInfo {
+    std::uint64_t r = 0;        // modulus exponent found in step 2
+    std::uint64_t bound = 0;    // congruences step 5 would check for a prime
+    std::uint64_t checked = 0;  // congruences actually evaluated
+    std::string step;           // which step decided the answer
+};
+// Same as aks(), but also fills `info`. Reads aks.cpp's global stats, so
+// call it from one thread at a time (the benchmark uses a single worker).
+Verdict aksWithInfo(std::uint64_t n, AksInfo& info);
+
 // --- Trial division (reference oracle, not one of the three) ------------
 // Simple and obviously correct. Used by the tests to check the other three,
 // and as the temporary stand-in body for any algorithm not written yet.

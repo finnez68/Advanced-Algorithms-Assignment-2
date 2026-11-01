@@ -16,14 +16,10 @@ add_library(primality STATIC
     MillerRabinFixed/miller_rabin_fixed.cpp    # Atnm
     MillerRabinRandom/miller_rabin_random.cpp  # Dino
     common/aks_adapter.cpp                     # Finley's AKS/aks.cpp, via the shared interface
-    common/trial_division.cpp
-        common/modular_arithmetic.h                  # reference oracle
+    common/trial_division.cpp                  # reference oracle
+    common/modular_arithmetic.h            
 )
 target_include_directories(primality PUBLIC common)
-
-# Finley's standalone AKS programs, unchanged (each has its own main()).
-add_executable(aks AKS/aks.cpp)
-add_executable(aks_testing AKS/aks_testing.cpp)
 
 # --- Tests ----------------------------------------------------------------
 FetchContent_Declare(googletest
@@ -77,6 +73,7 @@ if(ISPRIME_BUILD_GUI)
         gui/main.cpp
         gui/app.cpp
         gui/runner.cpp
+        gui/benchmark.cpp
         gui/number_input.cpp
         ${imgui_SOURCE_DIR}/imgui.cpp
         ${imgui_SOURCE_DIR}/imgui_draw.cpp

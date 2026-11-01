@@ -6,7 +6,7 @@ whether n is **prime**, **composite**, or **neither** (n = 1).
 | Algorithm | Kind | Primary author | Code |
 |---|---|---|---|
 | Miller-Rabin with fixed witness sets | deterministic for 64-bit n | atnm | `MillerRabinFixed/` |
-| Miller-Rabin with random bases | randomised, error ≤ 4⁻ᵏ | UShadow03 | `MillerRabinRandom/` |
+| Miller-Rabin with random bases | randomised, error ≤ 4⁻ᵗ | UShadow03 | `MillerRabinRandom/` |
 | AKS | deterministic, polynomial time | Finley | `AKS/` |
 | Trial division | reference oracle for testing | — | `common/trial_division.cpp` |
 
@@ -23,18 +23,17 @@ whether n is **prime**, **composite**, or **neither** (n = 1).
   differences between the algorithms come from the algorithms, not from
   different multiplication code.
 - **`AKS/aks.cpp`** is a standalone program with its own `main()`.
-  `common/aks_adapter.cpp` includes it with `AKS_NO_MAIN` defined (as
-  `AKS/aks_testing.cpp` does) and wraps `aks_is_prime()` in the shared
-  interface.
+  `common/aks_adapter.cpp` includes it with `AKS_NO_MAIN` defined and wraps
+  `aks_is_prime()` in the shared interface.
 
 ### The algorithms in one line each
 
 - **Miller-Rabin, fixed witnesses:** tests the 12 bases 2, 3, 5, …, 37. That
   set is proven to catch every composite below about 3.18 × 10²³, which covers
   all 64-bit n, so a pass means *definitely* prime.
-- **Miller-Rabin, random bases:** tests k random bases (k = 20 by default).
+- **Miller-Rabin, random bases:** tests t random bases (t = 20 by default).
   A composite survives each round with probability at most ¼, so the answer
-  is "probably prime" with error ≤ 4⁻ᵏ. The trivial cases n = 2 and 3 are
+  is "probably prime" with error ≤ 4⁻ᵗ. The trivial cases n = 2 and 3 are
   answered exactly before any rounds run.
 - **AKS:** the deterministic polynomial-time test, with polynomials mod
   (Xʳ − 1, n) multiplied by schoolbook convolution. Its cost is set by r,
@@ -82,26 +81,53 @@ tests and AKS programs, without the GUI dependencies.
 | `isPrime` | the GUI |
 | `tests` | gtest suite: every algorithm against trial division |
 | `aks` | Finley's standalone AKS program (`./aks 1000003`, or no args for its self-test) |
-| `aks_testing` | Finley's AKS data-collection harness (writes `aks_results.csv`) |
 
 ## Tests
 
 ```
 cmake --build build --target tests
-./build/tests
+./build/tests                 # Linux
+build\tests.exe               # Windows (MinGW / Ninja)
+build\tests.exe --gtest_also_run_disabled_tests   # also run the slow AKS primes (several minutes)
 ```
 
-The suite checks every algorithm against trial division for each n up to
-200,000 (1,000 for AKS, matching `aks.cpp`'s own self-test). It also covers
-hard cases:
-- Carmichael numbers (561, 1105, 1729, …)
-- strong pseudoprimes to bases 2 / 2,3 / 2,3,5 / 2,3,5,7, which fool weaker
-  witness sets
-- primes near 2⁶⁴, which catch 64-bit overflow in modular multiplication
-- 2⁶⁴ − 1, and a product of the two largest 32-bit primes
+Run a subset with a filter, e.g. `--gtest_filter=MillerRabinRandom.*` or
+`--gtest_filter=Aks.*`.
 
-All 14 tests pass, and the suite takes about 15 s. Most of that is trial
-division and AKS; the Miller-Rabin tests take milliseconds.
+**Correctness against trial division.** Both Miller-Rabin versions are checked
+for every n up to 200,000, and AKS for every n up to 1,000 (it is too slow for
+more).
+
+**Shared hard cases.** All three algorithms are tested on the same two lists,
+`kPrimes` and `kComposites` in `tests/test_algorithms.cpp`:
+- Carmichael numbers (561, 1105, 1729, …, 825265)
+- strong pseudoprimes to bases 2 / 2,3 / 2,3,5 / 2,3,5,7, which fool weaker
+  witness sets, and 3825123056546413051, which fools every prime base from 2
+  to 31
+- 703 = 19 × 37, whose strong-liar rate (about 22.9%) is close to the ¼ bound
+- prime powers, products of close primes, and Mersenne primes
+- primes near 2⁶⁴, 2⁶⁴ − 1, 4294967291², and a product of the two largest
+  32-bit primes, which catch 64-bit overflow in modular multiplication
+
+AKS runs the composites below 2³² and the primes up to 127. Larger primes take
+seconds to minutes each in AKS (524287 takes about 2 minutes), so primes from
+128 to 2²⁰ are in `Aks.DISABLED_SlowPrimes`, which runs only with
+`--gtest_also_run_disabled_tests`. The largest inputs are tested only on the
+two Miller-Rabin versions.
+
+**Random Miller-Rabin properties.** Extra tests check what is specific to
+random bases:
+- **one-sided error:** a prime is never reported composite, for 1,000 seeds
+  with a single round
+- **strong-liar bound:** with one round, 703 is fooled sometimes but less than
+  ¼ of the time
+- **rounds work:** with 20 rounds, every composite is caught on every run
+- **reproducibility:** the same seed gives the same results
+- **edge cases:** n = 0, 1, 4 and 5, and `rounds` ≤ 0 (clamped to 1)
+- **large inputs:** agrees with the fixed version on 100,000 random odd 64-bit n
+
+The fixed version is exact for 64-bit n, so it is the reference for inputs too
+large for trial division.
 
 ## Using the GUI
 
@@ -126,14 +152,14 @@ division and AKS; the Miller-Rabin tests take milliseconds.
 - **File → Load example numbers** loads a demo set: 1, 2, a Carmichael number,
   strong pseudoprimes, 2⁶¹−1, the largest 64-bit prime and more.
   **Save / Open** store rows as JSON.
-- **Settings → Preferences** has the UI scale, the random Miller-Rabin rounds k,
+- **Settings → Preferences** has the UI scale, the random Miller-Rabin rounds t,
   the RNG seed (0 = a new seed per run), and the repeat-timing toggle.
   Settings are saved to `isprime_settings.json` in the working directory.
 
 ## Layout
 
 ```
-AKS/                 Finley: aks.cpp, aks_testing.cpp, aks_results.csv
+AKS/                 Finley: aks.cpp
 MillerRabinFixed/    atnm:   miller_rabin_fixed.cpp
 MillerRabinRandom/   UShadow03:   miller_rabin_random.cpp
 common/              primality.h, modular_arithmetic.h, aks_adapter.cpp, trial_division.cpp

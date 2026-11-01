@@ -22,11 +22,7 @@ namespace {
 // Stops the compiler from deleting calls whose results are never used.
 volatile int g_sink = 0;
 
-struct Measurement {
-    Verdict verdict = Verdict::Neither;
-    double secondsPerCall = 0.0;
-    long long calls = 1;
-};
+} // namespace
 
 // One timed call first. If it took under 1 ms, a single reading would be
 // mostly timer noise and cold-cache cost, so (if enabled) run 7 batches,
@@ -63,6 +59,8 @@ Measurement Measure(const std::function<Verdict()>& call, const std::atomic<bool
     return m;
 }
 
+namespace {
+    
 void Worker(std::shared_ptr<Run> run) {
     const std::uint64_t n = run->n;
     const RunSettings s = run->settings;
