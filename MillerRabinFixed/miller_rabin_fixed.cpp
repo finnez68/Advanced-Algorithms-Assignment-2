@@ -15,7 +15,7 @@ bool doesBasePass(u64 n, u64 a_mod_n, u64 nMinusOneFactor, int nMinusOneHalvedBy
     }
 
     //miller-rabin extension
-    for (int i = 1; i <= nMinusOneHalvedByThisCount-1; i++) {
+    for (int i = 1; i < nMinusOneHalvedByThisCount; i++) {
         x = mod_arith::mulmod(x, x, n);
         if (x == n-1) {
             return true;
