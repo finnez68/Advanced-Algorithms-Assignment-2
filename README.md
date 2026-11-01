@@ -22,9 +22,10 @@ whether n is **prime**, **composite**, or **neither** (n = 1).
   to double-and-add (MSVC). Because the arithmetic is shared, timing
   differences between the algorithms come from the algorithms, not from
   different multiplication code.
-- **`AKS/aks.cpp`** is a standalone program with its own `main()`.
-  `common/aks_adapter.cpp` includes it with `AKS_NO_MAIN` defined and wraps
-  `aks_is_prime()` in the shared interface.
+- **`AKS/aks.cpp`** is Finley's AKS implementation. `common/aks_adapter.cpp`
+  includes it and wraps `aks_is_prime()` in the shared interface, plus
+  `aksWithInfo()`, which also reports AKS's internal statistics (r, bound,
+  congruences checked, deciding step) for the benchmark.
 
 ### The algorithms in one line each
 
@@ -71,16 +72,16 @@ pick different bases under MSVC, because `std::uniform_int_distribution`
 differs between standard libraries.
 
 The build type defaults to Release, because unoptimised timings are
-meaningless. Add `-DISPRIME_BUILD_GUI=OFF` to build only the algorithms,
-tests and AKS programs, without the GUI dependencies.
+meaningless. Add `-DISPRIME_BUILD_GUI=OFF` to build only the algorithms and
+tests, without the GUI dependencies.
 
 ### Targets
 
 | Target | What it is |
 |---|---|
-| `isPrime` | the GUI |
-| `tests` | gtest suite: every algorithm against trial division |
-| `aks` | Finley's standalone AKS program (`./aks 1000003`, or no args for its self-test) |
+| `primality` | static library with all three algorithms and trial division, shared by the GUI and the tests |
+| `isPrime` | the GUI, including the benchmark |
+| `tests` | gtest suite: correctness against trial division, shared hard cases, and random Miller-Rabin properties |
 
 ## Tests
 
@@ -129,6 +130,37 @@ random bases:
 The fixed version is exact for 64-bit n, so it is the reference for inputs too
 large for trial division.
 
+## Benchmark
+
+**Benchmark → Run benchmark suite…** in the GUI runs a fixed set of inputs
+through all three algorithms on a background thread, then **Save CSV…**
+writes the results. This is where the report's timings come from.
+
+**Inputs.** For each bit length 8, 12, …, 64 (the step is adjustable): the
+largest prime with that many bits, a semiprime of two primes near the square
+root, and 3 × a large prime. Then 11 named hard cases: Carmichael numbers,
+strong pseudoprimes, 703, and 4294967291².
+
+**Runs.**
+- Fixed Miller-Rabin once per input.
+- Random Miller-Rabin at t = 1, 5, 10, 20 and 40, with a fixed seed
+  (default 12345), so runs can be repeated.
+- AKS only on primes up to 16 bits and composites up to 32 bits by default.
+  Both limits are adjustable; 20-bit primes take minutes each.
+
+Every algorithm is timed with the same `Measure` function as the GUI rows:
+one run, or, if that took under 1 ms, the median of 7 batches of about 1 ms
+each.
+
+**CSV columns:** `n, bits, type, expected, algorithm, rounds, verdict,
+correct, time_ns, calls`, plus `aks_r, aks_bound, aks_congruences_checked,
+aks_deciding_step` on AKS rows. The file starts with `#` comment lines
+recording the compiler, the `mulmod` path, the build type and the seed
+(`pd.read_csv(path, comment='#')` in Python).
+
+Don't press **Go!** on other rows while the benchmark runs: they compete for
+the CPU, and the AKS statistics are shared between threads.
+
 ## Using the GUI
 
 - Each row has an editable title, a **Number** box and **Go!** (Enter works too).
@@ -136,8 +168,9 @@ large for trial division.
 - **Go!** runs the three algorithms in turn on a background thread, so the
   window stays responsive. A running algorithm shows a live timer and a
   **Cancel** button.
-- **AKS is slow on large primes.** It takes about 1 s for n ≈ 10⁴, minutes for
-  a 32-bit prime, and hours for a prime near 2⁶⁴, so expect to cancel it.
+- **AKS is slow on large primes.** It takes seconds for n ≈ 10⁴, about 2
+  minutes for a 20-bit prime, and far longer beyond that, so expect to cancel
+  it.
   Cancel marks the row cancelled straight away, but a call that's already
   running can't be interrupted from outside: it finishes in the background,
   using one CPU core, and its result is discarded. Closing the window stops
@@ -145,8 +178,8 @@ large for trial division.
 - **Timing.** Runs under 1 ms are repeated in 7 batches of about 1 ms each, and
   the median per-call time is shown, because a single sub-microsecond reading
   is mostly timer noise. Slower runs are timed once. Hover a runtime for the
-  details. These are demo timings; the report's numbers should come from
-  repeated benchmark runs.
+  markdown details. These are demo timings; the report's numbers come from the
+  benchmark (see above).
 - If the algorithms **disagree**, the dissenting row turns red ("Prime" and
   "Probably prime" count as agreeing).
 - **File → Load example numbers** loads a demo set: 1, 2, a Carmichael number,
@@ -164,6 +197,7 @@ MillerRabinFixed/    atnm:   miller_rabin_fixed.cpp
 MillerRabinRandom/   UShadow03:   miller_rabin_random.cpp
 common/              primality.h, modular_arithmetic.h, aks_adapter.cpp, trial_division.cpp
 gui/                 main.cpp (window), app.* (UI), runner.* (background runs + timing),
+                     benchmark.* (benchmark suite + CSV export),
                      number_input.* (parsing the Number box)
 tests/               gtest suites
 ```
