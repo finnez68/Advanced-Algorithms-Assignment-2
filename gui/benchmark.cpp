@@ -47,10 +47,26 @@ void BenchWorker(std::shared_ptr<BenchmarkRun> run) {
             return run->rows.back();
         };
 
-        record("Miller-Rabin (fixed)", 0,
-               Measure([n] { return millerRabinFixed(n); }, run->cancel, true));
+        // Every measurement holds the program-wide measurement lock, so a row's
+        // Go! never runs at the same time (it waits as "queued", and this
+        // waits for it in turn). Returns a lock that doesn't own the turn if
+        // the benchmark was cancelled while waiting.
+        auto takeTurn = [&] {
+            auto turn = AcquireMeasurementTurn(run->cancel, [&] { run->waitingForRow.store(true); });
+            run->waitingForRow.store(false);
+            return turn;
+        };
+
+        {
+            auto turn = takeTurn();
+            if (!turn.owns_lock()) break;
+            record("Miller-Rabin (fixed)", 0,
+                   Measure([n] { return millerRabinFixed(n); }, run->cancel, true));
+        }
 
         for (int t : s.rounds) {
+            auto turn = takeTurn();
+            if (!turn.owns_lock()) break;
             std::mt19937_64 rng(s.seed);  // same seed for every (n, t): reproducible
             record("Miller-Rabin (random)", t,
                    Measure([n, t, &rng] { return millerRabinRandom(n, t, rng); }, run->cancel, true));
@@ -58,9 +74,14 @@ void BenchWorker(std::shared_ptr<BenchmarkRun> run) {
 
         const int aksLimit = in.expected == Verdict::Prime ? s.aksMaxPrimeBits : s.aksMaxCompositeBits;
         if (in.bits <= aksLimit && !run->cancel.load()) {
+            auto turn = takeTurn();
+            if (!turn.owns_lock()) break;
             BenchRow& r = record("AKS", 0, Measure([n] { return aks(n); }, run->cancel, true));
             r.hasAks = true;
-            aksWithInfo(n, r.aks);  // untimed extra call: only reads r, bound, checked, step
+            // Untimed extra call that only reads r, bound, checked and step. It
+            // stays inside the same turn because those come from aks.cpp's
+            // shared statistics, which another AKS call would overwrite.
+            aksWithInfo(n, r.aks);
         }
     }
     run->done.store(true, std::memory_order_release);
