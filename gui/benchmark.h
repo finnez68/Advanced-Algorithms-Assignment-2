@@ -43,6 +43,7 @@ struct BenchmarkRun {
     std::atomic<int> current{0};       // index of the input being measured
     std::atomic<bool> cancel{false};
     std::atomic<bool> done{false};
+    std::atomic<bool> waitingForRow{false}; // waiting for a row's Go! measurement to finish
     std::vector<BenchRow> rows;        // written by the worker; read only once done is true
 };
 
