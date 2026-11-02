@@ -20,6 +20,7 @@
 // bring the theoretical bound down to roughly O~(log^6 n).
 
 #include <algorithm>
+#include <atomic>
 #include <chrono>
 #include <cmath>
 #include <cstdint>
@@ -99,6 +100,19 @@ static Poly poly_mul(const Poly& A, const Poly& B, u64 n, size_t r) {
     return C;
 }
 
+// Optional cooperative cancellation. A caller that wants to be able to stop
+// a long run points g_aks_cancel at a flag; aks_is_prime() then throws
+// AksCancelled shortly after the flag becomes true. A running thread can't
+// be stopped safely from outside, so AKS checks the flag itself, once per
+// polynomial squaring (at most ~0.1 s apart even for 64-bit n). Left null,
+// it costs one pointer test per squaring and changes nothing.
+struct AksCancelled {};
+static thread_local const std::atomic<bool>* g_aks_cancel = nullptr;
+
+static inline void aks_check_cancel() {
+    if (g_aks_cancel && g_aks_cancel->load(std::memory_order_relaxed)) throw AksCancelled{};
+}
+
 // (X + a)^e  mod (X^r - 1, n), by square-and-multiply.
 static Poly poly_pow_x_plus_a(u64 a, u64 e, u64 n, size_t r) {
     Poly base(r, 0), result(r, 0);
@@ -106,6 +120,7 @@ static Poly poly_pow_x_plus_a(u64 a, u64 e, u64 n, size_t r) {
     base[1 % r] = (base[1 % r] + 1) % n;  // r >= 2 always, so this is X
     result[0] = 1;
     while (e) {
+        aks_check_cancel();
         if (e & 1) result = poly_mul(result, base, n, r);
         e >>= 1;
         if (e) base = poly_mul(base, base, n, r);
@@ -175,6 +190,4 @@ static bool aks_is_prime(u64 n, AksStats* stats = &g_stats) {
     st.reason = "step 6: all congruences hold";
     return true;
 }
-
-
 
