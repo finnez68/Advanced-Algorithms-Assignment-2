@@ -22,7 +22,23 @@ namespace {
 // Stops the compiler from deleting calls whose results are never used.
 volatile int g_sink = 0;
 
+// Held for the whole of every timed measurement, program-wide.
+std::mutex g_measurementMutex;
+
 } // namespace
+
+std::unique_lock<std::mutex> AcquireMeasurementTurn(const std::atomic<bool>& cancel,
+                                                    const std::function<void()>& onWait) {
+    std::unique_lock<std::mutex> lock(g_measurementMutex, std::try_to_lock);
+    if (lock.owns_lock()) return lock;
+    if (onWait) onWait();
+    // Poll rather than block, so a cancelled row stops waiting straight away.
+    while (!cancel.load()) {
+        if (lock.try_lock()) return lock;
+        std::this_thread::sleep_for(std::chrono::milliseconds(2));
+    }
+    return lock; // cancelled: owns_lock() is false
+}
 
 // One timed call first. If it took under 1 ms, a single reading would be
 // mostly timer noise and cold-cache cost, so (if enabled) run 7 batches,
@@ -75,6 +91,15 @@ void Worker(std::shared_ptr<Run> run) {
     for (int i = 0; i < kAlgorithmCount; i++) {
         AlgoSlot& slot = run->slots[i];
         if (run->cancel.load()) {
+            slot.state.store(SlotState::Cancelled, std::memory_order_release);
+            continue;
+        }
+        // Wait for any other measurement (another row, or the benchmark) to
+        // finish, so this one is timed on an otherwise idle program.
+        std::unique_lock<std::mutex> turn = AcquireMeasurementTurn(run->cancel, [&] {
+            slot.state.store(SlotState::Queued, std::memory_order_release);
+        });
+        if (!turn.owns_lock()) {
             slot.state.store(SlotState::Cancelled, std::memory_order_release);
             continue;
         }
