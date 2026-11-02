@@ -256,6 +256,7 @@ void App::Draw() {
     ImGui::End();
 
     DrawSettingsWindow();
+    DrawBenchmarkWindow();
 }
 
 void App::DrawMenuBar() {
@@ -273,6 +274,10 @@ void App::DrawMenuBar() {
     }
     if (ImGui::BeginMenu("Settings")) {
         if (ImGui::MenuItem("Preferences...")) showSettings_ = true;
+        ImGui::EndMenu();
+    }
+    if (ImGui::BeginMenu("Benchmark")) {
+        if (ImGui::MenuItem("Run benchmark suite...")) showBenchmark_ = true;
         ImGui::EndMenu();
     }
     ImGui::EndMenuBar();
@@ -398,7 +403,8 @@ void App::DrawResultsTable(Row& row) {
         // interrupt a call already in progress (e.g. a long AKS run), so it
         // only marks the slot Cancelled once that call returns -- without
         // this, the row would keep showing "running..." until then.
-        if (run && run->cancel.load() && (state == SlotState::Running || state == SlotState::Pending))
+        if (run && run->cancel.load() &&
+            (state == SlotState::Running || state == SlotState::Pending || state == SlotState::Queued))
             state = SlotState::Cancelled;
         const AlgoSlot* slot = run ? &run->slots[i] : nullptr;
 
@@ -409,6 +415,12 @@ void App::DrawResultsTable(Row& row) {
         } else {
             switch (state) {
                 case SlotState::Pending:   ImGui::TextDisabled("waiting"); break;
+                case SlotState::Queued:
+                    ImGui::TextDisabled("queued");
+                    if (ImGui::IsItemHovered())
+                        ImGui::SetTooltip("Waiting for the benchmark (or another row) to finish its current\n"
+                                          "measurement, so the two don't compete for the CPU.");
+                    break;
                 case SlotState::Running:   ImGui::TextDisabled("running..."); break;
                 case SlotState::Done:      ImGui::TextUnformatted(ToString(slot->verdict)); break;
                 case SlotState::Cancelled: ImGui::TextDisabled("cancelled"); break;
@@ -435,6 +447,9 @@ void App::DrawResultsTable(Row& row) {
                 }
                 ImGui::SetTooltip("%s", tip.c_str());
             }
+        } else if (run && state == SlotState::Queued) {
+            RightAlign(cancelWidth);
+            if (ImGui::SmallButton("Cancel")) run->cancel = true;
         } else if (run && state == SlotState::Running) {
             // Live elapsed time while a slow algorithm (AKS) is still going.
             const double elapsed = static_cast<double>(SteadyNowNs() - slot->startNs.load()) / 1e9;
@@ -489,5 +504,62 @@ void App::DrawSettingsWindow() {
     ImGui::TextDisabled("Runs under 1 ms are timed in 7 batches; slower runs are timed once.");
     ImGui::TextDisabled("These are demo timings; the report's numbers should come from repeated benchmark runs.");
 
+    ImGui::End();
+}
+
+void App::DrawBenchmarkWindow() {
+    if (!showBenchmark_) return;
+    if (!ImGui::Begin("Benchmark", &showBenchmark_, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoCollapse)) {
+        ImGui::End();
+        return;
+    }
+    const float fieldWidth = Snap(180.0f * uiScale_);
+    const bool running = bench_ && !bench_->done.load(std::memory_order_acquire);
+
+    ImGui::BeginDisabled(running);
+    ImGui::SetNextItemWidth(fieldWidth);
+    ImGui::SliderInt("Bit step", &benchSettings_.bitStep, 1, 8);
+    ImGui::SetNextItemWidth(fieldWidth);
+    ImGui::SliderInt("AKS: max prime bits", &benchSettings_.aksMaxPrimeBits, 0, 20);
+    ImGui::SetNextItemWidth(fieldWidth);
+    ImGui::SliderInt("AKS: max composite bits", &benchSettings_.aksMaxCompositeBits, 0, 64);
+    ImGui::SetNextItemWidth(fieldWidth);
+    ImGui::InputScalar("Seed", ImGuiDataType_U64, &benchSettings_.seed);
+    ImGui::TextDisabled("Random Miller-Rabin runs with t = 1, 5, 10, 20 and 40.");
+    ImGui::TextDisabled("AKS on 16-bit primes takes tens of seconds each; 20-bit primes take minutes.");
+    ImGui::TextDisabled("Go! still works while it runs: rows wait their turn, so timings never overlap.");
+    if (ImGui::Button("Start")) {
+        bench_ = StartBenchmark(benchSettings_);
+        benchStatus_.clear();
+    }
+    ImGui::EndDisabled();
+
+    if (bench_) {
+        const int total = static_cast<int>(bench_->inputs.size());
+        const int cur = running ? bench_->current.load() : total;
+        ImGui::ProgressBar(total ? static_cast<float>(cur) / total : 1.0f, ImVec2(fieldWidth * 2.0f, 0));
+        if (running) {
+            const BenchInput& in = bench_->inputs[cur];
+            ImGui::Text("Input %d / %d: n = %llu (%s)", cur + 1, total,
+                        static_cast<unsigned long long>(in.n), in.type.c_str());
+            if (bench_->waitingForRow.load())
+                ImGui::TextDisabled("Waiting for a row's Go! measurement to finish...");
+            if (ImGui::Button("Cancel")) bench_->cancel = true;
+        } else {
+            int wrong = 0;
+            for (const BenchRow& r : bench_->rows) if (!r.correct) wrong++;
+            ImGui::Text("%s: %zu measurements, %d incorrect",
+                        bench_->cancel.load() ? "Cancelled" : "Finished", bench_->rows.size(), wrong);
+            if (ImGui::Button("Save CSV...")) {
+                const char* patterns[1] = {"*.csv"};
+                const char* chosen = tinyfd_saveFileDialog("Save benchmark results", "benchmark.csv",
+                                                           1, patterns, "CSV files");
+                if (chosen)
+                    benchStatus_ = WriteBenchmarkCsv(*bench_, chosen) ? std::string("Saved ") + chosen
+                                                                      : std::string("Could not write ") + chosen;
+            }
+        }
+    }
+    if (!benchStatus_.empty()) ImGui::TextDisabled("%s", benchStatus_.c_str());
     ImGui::End();
 }
