@@ -20,7 +20,6 @@
 #include <cstdint>
 #include <functional>
 #include <memory>
-#include <mutex>
 #include <string>
 
 // Queued: waiting for another measurement (e.g. the benchmark) to finish.
@@ -77,9 +76,31 @@ std::shared_ptr<Run> StartRun(std::uint64_t n, const RunSettings& settings);
 
 long long SteadyNowNs();
 
-// Waits for this thread's turn to take a timed measurement and returns a
-// lock that holds it until destroyed. If the lock is busy, `onWait` is called
-// once before waiting. Gives up (returns a lock that doesn't own the turn --
-// check owns_lock()) if `cancel` becomes true while waiting.
-std::unique_lock<std::mutex> AcquireMeasurementTurn(const std::atomic<bool>& cancel,
-                                                    const std::function<void()>& onWait = {});
+// Holds this thread's turn to take a timed measurement; the turn is given
+// back when the object is destroyed (or unlock() is called). Movable, not
+// copyable.
+class MeasurementTurn {
+public:
+    MeasurementTurn() = default;
+    explicit MeasurementTurn(bool owns) : owns_(owns) {}
+    MeasurementTurn(MeasurementTurn&& other) noexcept;
+    MeasurementTurn& operator=(MeasurementTurn&& other) noexcept;
+    MeasurementTurn(const MeasurementTurn&) = delete;
+    MeasurementTurn& operator=(const MeasurementTurn&) = delete;
+    ~MeasurementTurn() { unlock(); }
+
+    bool owns_lock() const { return owns_; }
+    void unlock();
+
+private:
+    bool owns_ = false;
+};
+
+// Waits for this thread's turn to take a timed measurement. Turns are handed
+// out first come, first served, so a row that presses Go! during the
+// benchmark gets the very next turn instead of waiting for the whole
+// benchmark. If the turn isn't free, `onWait` is called once before waiting.
+// Gives up (returns a turn where owns_lock() is false) if `cancel` becomes
+// true while waiting.
+MeasurementTurn AcquireMeasurementTurn(const std::atomic<bool>& cancel,
+                                       const std::function<void()>& onWait = {});
