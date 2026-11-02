@@ -8,8 +8,7 @@ using u64 = uint64_t;
 
 bool doesBasePass(u64 n, u64 a_mod_n, u64 nMinusOneFactor, int nMinusOneHalvedByThisCount) {
     u64 x = mod_arith::powmod(a_mod_n, nMinusOneFactor, n);
-
-    //fermat test
+    
     if (x == 1 || x == n-1) {
         return true;
     }
@@ -31,7 +30,7 @@ Verdict millerRabinFixed(std::uint64_t n) {
     if (n % 2 == 0) return Verdict::Composite;
 
     //preparing numbers for Miller-Rabin's difference of squares test
-    u64 nMinusOne = n - 1; //must be even since we assume n is prime and we already handled n = 2 and even numbers.
+    u64 nMinusOne = n - 1; //must be even since we assume n is prime and we already handled n = 2 and even numbers so n is odd.
     u64 nMinusOneFactor = nMinusOne; //this will be the final odd number, aka d
     int nMinusOneHalvedByThisCount = 0; //number of times n-1 is halved, aka k or s 
     while (nMinusOneFactor % 2 == 0) {
