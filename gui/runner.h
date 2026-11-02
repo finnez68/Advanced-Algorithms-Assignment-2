@@ -5,7 +5,13 @@
 // so their timings don't compete with each other for the CPU. The UI only
 // reads a slot's result fields after it sees that slot's state become Done
 // or Error (an acquire load pairing with the worker's release store), so
-// no locks are needed.
+// the UI itself never needs a lock.
+//
+// Timing, however, is serialised: every timed measurement, from a row or
+// from the benchmark, must hold the program-wide measurement lock (see
+// AcquireMeasurementTurn). Two measurements therefore never run at the same
+// time and compete for the CPU, and AKS's shared statistics are never
+// written by two calls at once.
 
 #pragma once
 #include "primality.h"
@@ -14,9 +20,11 @@
 #include <cstdint>
 #include <functional>
 #include <memory>
+#include <mutex>
 #include <string>
 
-enum class SlotState : int { Pending, Running, Done, Error, Cancelled };
+// Queued: waiting for another measurement (e.g. the benchmark) to finish.
+enum class SlotState : int { Pending, Queued, Running, Done, Error, Cancelled };
 
 struct AlgoSlot {
     std::atomic<SlotState> state{SlotState::Pending};
@@ -68,3 +76,10 @@ Measurement Measure(const std::function<Verdict()>& call, const std::atomic<bool
 std::shared_ptr<Run> StartRun(std::uint64_t n, const RunSettings& settings);
 
 long long SteadyNowNs();
+
+// Waits for this thread's turn to take a timed measurement and returns a
+// lock that holds it until destroyed. If the lock is busy, `onWait` is called
+// once before waiting. Gives up (returns a lock that doesn't own the turn --
+// check owns_lock()) if `cancel` becomes true while waiting.
+std::unique_lock<std::mutex> AcquireMeasurementTurn(const std::atomic<bool>& cancel,
+                                                    const std::function<void()>& onWait = {});
