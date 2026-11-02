@@ -10,8 +10,11 @@
 // PROVEN correct below a bound, and the standard sets cover all of 64-bit.
 
 #pragma once
+#include <atomic>
 #include <cstdint>
+#include <exception>
 #include <random>
+#include <string>
 
 enum class Verdict {
     Neither,       // n == 1 (and n == 0, though the GUI never passes 0): neither prime nor composite
@@ -42,6 +45,15 @@ Verdict millerRabinRandom(std::uint64_t n, int rounds, std::mt19937_64& rng);
 // AKS/aks.cpp; common/aks_adapter.cpp exposes it through this interface.
 Verdict aks(std::uint64_t n);
 
+// Thrown by the cancellable calls below when their cancel flag is set.
+struct AlgorithmCancelled : std::exception {
+    const char* what() const noexcept override { return "cancelled"; }
+};
+
+// Same as aks(), but stops within about 0.1 s of `cancel` becoming true by
+// throwing AlgorithmCancelled. Used by the GUI so Cancel really stops AKS.
+Verdict aksCancellable(std::uint64_t n, const std::atomic<bool>& cancel);
+
 // AKS's internal statistics for one call, for the benchmark CSV.
 struct AksInfo {
     std::uint64_t r = 0;        // modulus exponent found in step 2
@@ -51,7 +63,8 @@ struct AksInfo {
 };
 // Same as aks(), but also fills `info`. Reads aks.cpp's global stats, so
 // call it from one thread at a time (the benchmark uses a single worker).
-Verdict aksWithInfo(std::uint64_t n, AksInfo& info);
+// If `cancel` is given, it can be stopped like aksCancellable().
+Verdict aksWithInfo(std::uint64_t n, AksInfo& info, const std::atomic<bool>* cancel = nullptr);
 
 // --- Trial division (reference oracle, not one of the three) ------------
 // Simple and obviously correct. Used by the tests to check the other three,

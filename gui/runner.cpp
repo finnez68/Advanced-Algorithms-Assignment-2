@@ -138,7 +138,7 @@ void Worker(std::shared_ptr<Run> run) {
     const std::array<std::function<Verdict()>, kAlgorithmCount> calls = {
         [n] { return millerRabinFixed(n); },
         [n, &rng, &s] { return millerRabinRandom(n, s.mrRounds, rng); },
-        [n] { return aks(n); },
+        [n, &run] { return aksCancellable(n, run->cancel); },  // stops promptly on Cancel
     };
 
     for (int i = 0; i < kAlgorithmCount; i++) {
@@ -170,6 +170,10 @@ void Worker(std::shared_ptr<Run> run) {
             slot.secondsPerCall = m.secondsPerCall;
             slot.calls = m.calls;
             slot.state.store(SlotState::Done, std::memory_order_release);
+        } catch (const AlgorithmCancelled&) {
+            // AKS noticed Cancel and stopped part-way; its turn is released
+            // as `turn` goes out of scope, so the next Go! can start at once.
+            slot.state.store(SlotState::Cancelled, std::memory_order_release);
         } catch (const std::exception& e) {
             slot.error = e.what();
             slot.state.store(SlotState::Error, std::memory_order_release);

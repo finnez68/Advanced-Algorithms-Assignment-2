@@ -76,12 +76,19 @@ void BenchWorker(std::shared_ptr<BenchmarkRun> run) {
         if (in.bits <= aksLimit && !run->cancel.load()) {
             auto turn = takeTurn();
             if (!turn.owns_lock()) break;
-            BenchRow& r = record("AKS", 0, Measure([n] { return aks(n); }, run->cancel, true));
-            r.hasAks = true;
-            // Untimed extra call that only reads r, bound, checked and step. It
-            // stays inside the same turn because those come from aks.cpp's
-            // shared statistics, which another AKS call would overwrite.
-            aksWithInfo(n, r.aks);
+            try {
+                const Measurement m = Measure([&] { return aksCancellable(n, run->cancel); }, run->cancel, true);
+                // Untimed extra call that only reads r, bound, checked and step.
+                // It stays inside the same turn because those come from aks.cpp's
+                // shared statistics, which another AKS call would overwrite.
+                AksInfo info;
+                aksWithInfo(n, info, &run->cancel);
+                BenchRow& r = record("AKS", 0, m);
+                r.hasAks = true;
+                r.aks = info;
+            } catch (const AlgorithmCancelled&) {
+                break;  // benchmark cancelled during AKS: stop without a partial row
+            }
         }
     }
     run->done.store(true, std::memory_order_release);

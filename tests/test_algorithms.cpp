@@ -8,6 +8,8 @@
 
 #include "primality.h"
 #include <gtest/gtest.h>
+#include <atomic>
+#include <chrono>
 #include <vector>
 
 namespace {
@@ -162,4 +164,16 @@ TEST(Aks, HardCases) {
 TEST(Aks, DISABLED_SlowPrimes) {
     for (auto p : kPrimes)
         if (p > 127 && p < (1ULL << 20)) EXPECT_EQ(aks(p), Verdict::Prime) << p;
+}
+
+// Cancelling AKS must stop it promptly. 18446744073709551557 would take hours;
+// with the flag already set, aksCancellable must throw almost at once.
+TEST(Aks, CancelStopsPromptly) {
+    std::atomic<bool> cancel{true};
+    const auto t0 = std::chrono::steady_clock::now();
+    EXPECT_THROW(aksCancellable(18446744073709551557ULL, cancel), AlgorithmCancelled);
+    EXPECT_LT(std::chrono::duration<double>(std::chrono::steady_clock::now() - t0).count(), 2.0);
+    // Without cancelling, the cancellable version gives the same answers.
+    std::atomic<bool> keepGoing{false};
+    for (std::uint64_t n = 1; n <= 200; n++) EXPECT_EQ(aksCancellable(n, keepGoing), aks(n)) << n;
 }
