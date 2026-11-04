@@ -393,7 +393,13 @@ void App::DrawResultsTable(Row& row) {
                                   "implementation hasn't been plugged in yet.", info.name);
         }
 
-        const SlotState state = run ? run->slots[i].state.load(std::memory_order_acquire) : SlotState::Pending;
+        SlotState state = run ? run->slots[i].state.load(std::memory_order_acquire) : SlotState::Pending;
+        // Cancel takes effect on screen immediately. The worker can't
+        // interrupt a call already in progress (e.g. a long AKS run), so it
+        // only marks the slot Cancelled once that call returns -- without
+        // this, the row would keep showing "running..." until then.
+        if (run && run->cancel.load() && (state == SlotState::Running || state == SlotState::Pending))
+            state = SlotState::Cancelled;
         const AlgoSlot* slot = run ? &run->slots[i] : nullptr;
 
         // Result
